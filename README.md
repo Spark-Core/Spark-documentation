@@ -17,7 +17,7 @@ This software is only used for internal development, which means we do not give 
 ###### Things you are not allowed to do:
 - Claim your hosted version is official.
 - Editing and hosting without up to date information and / or invalid information. 
-- Host for public use and promote other users to switch their settings to use your host.
-- Force other users to use your version of this software instead of the official host (https://discordspark.tk/).
+- Host for public use and tell other users to use your host.
+- Forcing other users to use your version of this software instead of the official host (https://discordspark.tk/).
 - Providing documentation.
 - Trying to find loopholes, bugs, errors, etc. in the software without reporting them [here](https://github.com/sparkbots/Spark-documenation/issues).
