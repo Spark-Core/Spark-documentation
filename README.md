@@ -1,6 +1,6 @@
 # Spark-documentation
 
-##### Server software to manage documenation for the [Spark bot framework](https://github.com/TobiasFeld22/Spark).
+##### Server software to manage documentation for the [Spark bot framework](https://github.com/TobiasFeld22/Spark).
 ---
 
 [![Discord](https://discordapp.com/api/guilds/248505281741455360/embed.png)](https://discord.gg/TezD2Zg)
