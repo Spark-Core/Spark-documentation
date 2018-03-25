@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+.navbar-item img {
+    border-radius: 50%;
+    max-height: 2rem;
+}
+
+.navbar-item h1 {
+    color: #fff
+}
+
+.navbar-item {
+    font-family: "Roboto"
+}
+
+#intro {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

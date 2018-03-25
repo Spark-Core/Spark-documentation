@@ -1,0 +1,17 @@
+# Meta
+
+title:         "Spark | Powerful modular framework Discord bot framework."
+description:   "Spark is a powerful modular framework that makes creating Discord bots easy."
+env:           "production"
+
+# Build
+
+markdown:      kramdown
+permalink:     pretty
+url:           https://discordspark.tk
+
+# Variables
+
+documentation: "/documentation/overview/start/"
+github:        https://github.com/TobiasFeld22/Spark
+version: 0.1
