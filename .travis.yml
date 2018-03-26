@@ -8,12 +8,12 @@ install:
     - gem install jekyll html-proofer
 jobs:
   include:
-    - stage: fetch
-        script: npm run fetch
-    - stage: build
-        script: jekyll build
-    - stage: test
-        script: htmlproofer ./_site --alt-ignore '/.*/'
+    - stage: Fetch
+      script: npm run fetch
+    - stage: Build
+      script: jekyll build
+    - stage: Test
+      script: htmlproofer ./_site --alt-ignore '/.*/'
 
 deploy:
     provider: pages
