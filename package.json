@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/Sparkbots/Spark-documentation#readme",
   "dependencies": {
-    "json2yaml": "^1.1.0",
     "request": "^2.85.0"
   }
 }

@@ -31,3 +31,13 @@ env:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
 sudo: false
+
+notifications:
+  webhooks:
+    urls:
+      - $webhook
+    on_success: always
+    on_failure: always
+    on_start: always
+    on_cancel: always
+    on_error: always
