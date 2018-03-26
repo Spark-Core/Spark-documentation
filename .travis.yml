@@ -1,9 +1,27 @@
-language:         ruby
-rvm:
-- 2.3.3
+language: node
+node_js:
+    - 8.10.0
+before_install:
+    - rvm install 2.3.3
+install:
+    - npm install
+    - gem install jekyll html-proofer
+jobs:
+  include:
+    - stage: fetch
+        script: npm run fetch
+    - stage: build
+        script: jekyll build
+    - stage: test
+        script: htmlproofer ./_site --alt-ignore '/.*/'
 
-install: gem install jekyll html-proofer
-script: jekyll build && htmlproofer ./_site --alt-ignore '/.*/'
+deploy:
+    provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    keep-history: true
+    on:
+        branch: gh-pages
 
 branches:
   only:
@@ -13,4 +31,4 @@ env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
-sudo:             false
+sudo: false

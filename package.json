@@ -1,0 +1,25 @@
+{
+  "name": "spark-documentation",
+  "version": "1.0.0",
+  "description": "Server software to manage the Spark documentation site.",
+  "scripts": {
+    "fetch": "node fetch.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sparkbots/Spark-documentation.git"
+  },
+  "keywords": [
+    "Spark"
+  ],
+  "author": "Sparkbots organisation",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sparkbots/Spark-documentation/issues"
+  },
+  "homepage": "https://github.com/Sparkbots/Spark-documentation#readme",
+  "dependencies": {
+    "json2yaml": "^1.1.0",
+    "request": "^2.85.0"
+  }
+}
