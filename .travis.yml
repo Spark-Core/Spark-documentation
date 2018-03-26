@@ -1,19 +1,18 @@
 language: node
 node_js:
     - 8.10.0
+
+
 before_install:
     - rvm install 2.3.3
 install:
     - npm install
     - gem install jekyll html-proofer
-jobs:
-  include:
-    - stage: fetch
-        script: npm run fetch
-    - stage: build
-        script: jekyll build
-    - stage: test
-        script: htmlproofer ./_site --alt-ignore '/.*/'
+
+script:
+    - npm run fetch
+    - jekyll build
+    - htmlproofer ./_site --alt-ignore '/.*/'
 
 deploy:
     provider: pages
