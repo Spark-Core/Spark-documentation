@@ -4,22 +4,22 @@ column: twoColomns.html
 ---
 
 <nav class="level">
-  <div class="level-item has-text-centered">
-    <div>
-      <p class="heading">Stargazers</p>
-      <p class="title">8</p>
+    <div class="level-item has-text-centered">
+        <div>
+            <p class="heading">Stargazers</p>
+            <p class="title">{{ site.data.stats.github }}</p>
+        </div>
     </div>
-  </div>
-  <div class="level-item has-text-centered">
-    <div>
-      <p class="heading">Downloads</p>
-      <p class="title">698</p>
+    <div class="level-item has-text-centered">
+        <div>
+            <p class="heading">Downloads</p>
+            <p class="title">{{ site.data.stats.downloads }}</p>
+        </div>
     </div>
-  </div>
-  <div class="level-item has-text-centered">
-    <div>
-      <p class="heading">Version</p>
-      <p class="title">0.0.6</p>
+    <div class="level-item has-text-centered">
+        <div>
+            <p class="heading">Latest Version</p>
+            <p class="title">{{ site.data.stats.version }}</p>
+        </div>
     </div>
-  </div>
 </nav>

@@ -1,10 +1,3 @@
----
-  time: 1522176443431
-  stats: 
-    github: 8
-    version: "0.0.6"
-    downloads: 
-      downloads: 698
-      start: "2016-09-26"
-      end: "2018-03-26"
-      package: "sparkbots"
+github: 8
+version: 0.0.6
+downloads: 698
