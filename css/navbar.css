@@ -18,3 +18,35 @@
     -ms-user-select: none;
     user-select: none;
 }
+
+.scrollTop {
+    width: 75px;
+    height: 75px
+}
+
+#toTop {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+.is-selected {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#install-npm {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1.225rem;
+}
+
+#column-left-button {
+    width: 100%;
+}
+
+#column-right-button {
+    width: 100%;
+    min-width: 95%;
+}

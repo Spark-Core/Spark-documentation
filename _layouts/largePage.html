@@ -2,7 +2,7 @@
 layout: default
 ---
 <!-- opening hero -->
-<section class="hero is-dark is-medium">
+<section class="hero {{ page.color }} is-medium">
 
         <div class="hero-body ">
             <div class="container">
@@ -10,9 +10,12 @@ layout: default
     </div>
       </div>
     </section>
-
+    {% if page.documentation %}
+        {% include menus/documentation/documentation.html %}
+    {%endif%}
     <section class="section">
-        <div class="container">
+
+            <div class="container">
             {{content}}
         </div>
     </section>
