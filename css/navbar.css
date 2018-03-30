@@ -60,3 +60,26 @@
 .footer {
     padding: 1rem 1.5rem 1rem !important;
 }
+.is-purple {
+    background-color: #4B0082 !important;
+    color: white !important;
+}
+.hero.is-purple .title {
+    color: white !important;
+}
+.hero.is-purple .subtitle {
+    color: white !important;
+}
+.is-purple .navbar-item {
+    color: white !important;
+}
+.tags .tag {
+    margin-bottom: 0;
+}
+.tags:last-child {
+
+    margin-bottom: 0;
+}
+.button.is-purple {
+    border-color: transparent;
+}

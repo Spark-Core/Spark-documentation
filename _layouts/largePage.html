@@ -10,7 +10,7 @@ layout: default
         </div>
     </div>
 </section>
-{% if page.documentation %} {% include menus/documentation/documentation.html %} {%endif%}
+{% if page.menu %} {% include {{page.menu}} %} {%endif%}
 <section class="section">
 
     <div class="container">

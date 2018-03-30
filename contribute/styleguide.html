@@ -1,0 +1,220 @@
+---
+layout: largePage
+color: is-purple
+column: headers/documentation.html
+title: Styleguide
+subtitle: Styling pages on the site
+menu: menus/contribute.html
+---
+<link href="/css/contribute.css" rel="stylesheet">
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h1 class="title">Introduction</h1>
+            <p>Our entire website is opensource
+            This way people can quickly make changes and help out
+
+             To keep clarity and continuity we have a few restrictions and preferences on what should be used on what moments</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h1 class="title"> Typography </h1> We use certain sizes to keep our documentation uniform.
+
+            <h1 class="title"> Big headers</h1>
+            <pre>&#x3C;h1 class="title"&#x3E;Big headers&#x3C;/h1&#x3E;</pre>
+            <p>This is used to announce to introduce to a subject</p>
+            <p>Inside this subject you can use smaller headers to show a smaller topic:</p>
+            <h4 class="subtitle"> Smaller headers</h1>
+                <pre>&#x3C;h4 class="subtitle"&#x3E;Smaller headers&#x3C;/h1&#x3E;</pre>
+                <p> For normal text, we just use regular paragraphs</p>
+                <pre>&#x3C;p&#x3E;Regular text&#x3C;/p&#x3E;</pre>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h1 class="title"> Header colors </h1>
+        <p>For almost all our pages, we use big hero banners from Bulma. <small>(Check it out at the top of the page)</small></p>
+        <p> We use the following colors for our headers:</p>
+
+        <table class="table is-fullwidth">
+            <thead>
+                <tr>
+                    <th class="icon-col">Color</th>
+                    <th>Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="icon-cell"><span class="icon color is-dark"></span></td>
+                    <td>
+                        <pre>.is-dark</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="icon-cell"><span class="icon color is-light"></span></td>
+                    <td>
+                        <pre>.is-light</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="icon-cell"><span class="icon color is-link"></span></td>
+                    <td>
+                        <pre>.is-link</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="icon-cell"><span class="icon color is-warning"></span></td>
+                    <td>
+                        <pre>.is-warning</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="icon-cell"><span class="icon color is-success"></span></td>
+                    <td>
+                        <pre>.is-success</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="icon-cell"><span class="icon color is-danger"></span></td>
+                    <td>
+                        <pre>.is-danger</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="icon-cell"><span class="icon color is-purple"></span></td>
+                    <td>
+                        <pre>.is-purple</pre>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h1 class="title"> Tags </h1>
+
+        <div class="tags">
+            <span class="tag is-purple">Special</span>
+        <div class="tags has-addons">
+            <span class="tag is-success">New:</span>
+            <span class="tag">Today</span>
+        </div>
+        </div>
+        <p>We use tags to indicate that something has changed, is required, or certain notice should be taken.</p>
+        <p>We use a primary code block with parts of the tag inside that.</p>
+
+        <div id="icons-example" class="columns">
+            <div class="column">
+            <p> For a 2 sided tag</p>
+            <pre><div class="tags has-addons">[tag-left] [tag-right] </span></pre>
+            </div>
+
+            <div class="text-cell column">
+                <p > For a 1 sided tag you just use the code given.</p>
+            </div>
+        </div>
+
+        <table class="table is-fullwidth">
+            <thead>
+                <tr>
+                    <th class="icon-col">Left</th>
+                    <th class="icon-col">Right</th>
+                    <th >Usage</th>
+                    <th>Left Code</th>
+                    <th>Right Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="icon-cell"><span class="icon color is-dark"></span></td>
+                    <td class="icon-cell"><span class="icon color is-light"></span></td>
+                    <td class="text-cell">Reserved</td>
+                    <td>
+                        <pre>&#x3C;span class=&#x22;tag is-dark&#x22;&#x3E;text&#x3C;/span&#x3E;</pre>
+                    </td>
+                    <td>
+                        <pre>&#x3C;span class=&#x22;tag is-light&#x22;&#x3E;text&#x3C;/span&#x3E;</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="icon-cell"><span class="icon color is-link"></span></td>
+                    <td class="icon-cell"><span class="icon color is-light"></span></td>
+                    <td class="text-cell">Type declarations</td>
+                    <td>
+                        <pre>&#x3C;span class=&#x22;tag is-link&#x22;&#x3E;text&#x3C;/span&#x3E;</pre>
+                    </td>
+                    <td>
+                        <pre>&#x3C;span class=&#x22;tag&#x22;&#x3E;text&#x3C;/span&#x3E;</pre>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="icon-cell"><span class="icon color is-warning"></span></td>
+                    <td class="icon-cell"><span class="icon color is-light"></span></td>
+                    <td class="text-cell">Reserved</td>
+                    <td>
+                        <pre>&#x3C;span class=&#x22;tag is-link&#x22;&#x3E;text&#x3C;/span&#x3E;</pre>
+                    </td>
+                    <td>
+                        <pre>&#x3C;span class=&#x22;tag&#x22;&#x3E;text&#x3C;/span&#x3E;</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="icon-cell"><span class="icon color is-success"></span></td>
+                    <td class="icon-cell"><span class="icon color is-light"></span></td>
+                    <td class="text-cell">Showing a certain part is new</td>
+                    <td>
+                        <pre>&#x3C;span class=&#x22;tag is-success&#x22;&#x3E;text&#x3C;/span&#x3E;</pre>
+                    </td>
+                    <td>
+                        <pre>&#x3C;span class=&#x22;tag&#x22;&#x3E;text&#x3C;/span&#x3E;</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="icon-cell"><span class="icon color is-danger"></span></td>
+                    <td class="icon-cell"><span class="icon color is-danger"></span></td>
+                    <td class="text-cell">Showing a certain part is required</td>
+                    <td>
+                        <pre>&#x3C;span class=&#x22;tag is-success&#x22;&#x3E;text&#x3C;/span&#x3E;</pre>
+                    </td>
+                    <td class="text-cell">
+                        This tag has just 1 side.
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="icon-cell"><span class="icon color is-purple"></span></td>
+                    <td class="icon-cell"><span class="icon color is-light"></span></td>
+                    <td class="text-cell">Reserved</td>
+                    <td>
+                        <pre>&#x3C;span class=&#x22;tag is-purple&#x22;&#x3E;text&#x3C;/span&#x3E;</pre>
+                    </td>
+                    <td>
+                        <pre>&#x3C;span class=&#x22;tag&#x22;&#x3E;text&#x3C;/span&#x3E;</pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="icon-cell"><span class="icon color is-light"></span></td>
+                    <td class="icon-cell"><span class="icon color is-dark"></span></td>
+                    <td class="text-cell">Reserved</td>
+                    <td>
+                        <pre>&#x3C;span class=&#x22;tag is-light&#x22;&#x3E;text&#x3C;/span&#x3E;</pre>
+                    </td>
+                    <td>
+                        <pre>&#x3C;span class=&#x22;tag is-light&#x22;&#x3E;text&#x3C;/span&#x3E;</pre>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</section>
