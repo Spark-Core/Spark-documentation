@@ -2,9 +2,6 @@
   "name": "spark-documentation",
   "version": "1.0.0",
   "description": "Server software to manage the Spark documentation site.",
-  "scripts": {
-    "fetch": "node fetch.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sparkbots/Spark-documentation.git"

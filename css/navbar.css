@@ -18,3 +18,68 @@
     -ms-user-select: none;
     user-select: none;
 }
+
+.scrollTop {
+    width: 75px;
+    height: 75px
+}
+
+#toTop {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+.is-selected {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#install-npm {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1.225rem;
+}
+
+#column-left-button {
+    width: 100%;
+}
+
+#column-right-button {
+    width: 100%;
+    min-width: 95%;
+}
+
+.icon-button {
+  margin-right: 8px!important;
+}
+.content-height {
+    min-height: calc(100vh - 50px);
+}
+.footer {
+    padding: 1rem 1.5rem 1rem !important;
+}
+.is-purple {
+    background-color: #4B0082 !important;
+    color: white !important;
+}
+.hero.is-purple .title {
+    color: white !important;
+}
+.hero.is-purple .subtitle {
+    color: white !important;
+}
+.is-purple .navbar-item {
+    color: white !important;
+}
+.tags .tag {
+    margin-bottom: 0;
+}
+.tags:last-child {
+
+    margin-bottom: 0;
+}
+.button.is-purple {
+    border-color: transparent;
+}

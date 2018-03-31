@@ -1,25 +1,48 @@
 ---
 layout: largePage
-column: twoColomns.html
+column: headers/homepage_header.html
+color: is-dark
 ---
 
 <nav class="level">
+    <link rel="stylesheet" href="/css/odometer-theme-default.css">
+    <script src="/js/odometer.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        stats_gh = new Odometer({
+            el: document.getElementById("stats-gh"),
+            value: 0,
+        });
+        stats_downloads = new Odometer({
+            el: document.getElementById("stats-downloads"),
+            value: 0,
+        });
+            $.get("https://spark-stats-homepage-6tdbby0qneos.runkit.sh/", function(data) {
+                var data = data.stats;
+
+                stats_gh.update(data.github);
+                stats_downloads.update(data.downloads);
+                $("#stats-version").html(data.version)
+            }, "json")
+
+        })
+    </script>
     <div class="level-item has-text-centered">
         <div>
             <p class="heading">Stargazers</p>
-            <p class="title">{{ site.data.stats.github }}</p>
+            <div id="stats-gh">0</div>
         </div>
     </div>
     <div class="level-item has-text-centered">
         <div>
             <p class="heading">Downloads</p>
-            <p class="title">{{ site.data.stats.downloads }}</p>
+            <div id="stats-downloads">0</div>
         </div>
     </div>
     <div class="level-item has-text-centered">
         <div>
-            <p class="heading">Latest Version</p>
-            <p class="title">{{ site.data.stats.version }}</p>
+            <p class="heading">Version</p>
+            <div id="stats-version">0</div>
         </div>
     </div>
 </nav>

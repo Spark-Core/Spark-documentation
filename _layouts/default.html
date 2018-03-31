@@ -10,12 +10,13 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
     <link rel="stylesheet" href="/css/navbar.css">
+    <script src="/js/jquery.min.js"></script>
 </head>
 
 <body>
     <!-- navbar -->
     <script src="/js/navbar.js"></script>
-    <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
+    <nav class="navbar {{page.color}} is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" href="/">
@@ -33,7 +34,8 @@
             </div>
             <div class="navbar-menu" id="navMenu">
                 <div class="navbar-start">
-                    <a class="navbar-item"> Home </a>
+                    <a href="/" class="navbar-item"> Home </a>
+                    <a href="/documentation/intro" class="navbar-item"> Documentation </a>
                 </div>
                 <div class="navbar-end">
                     <a target="_blank" href="https://github.com/Sparkbots" class="navbar-item is-hidden-mobile-only is-hidden-tablet-only"><span class="icon"><i class="fab fa-github"></i></span></a>
@@ -43,12 +45,26 @@
             </div>
         </div>
     </nav>
-
     <!-- navbar end -->
-
+    <div class="content-height">
     {{content}}
+    </div>
 
     <!-- closing file -->
+
+    <!-- footer -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                    <a href="https://github.com/sparkbots/">Sparkbots</a> &copy; 2018 | <a href="https://github.com/TobiasFeld22/Spark">Framework</a> | <a href="https://github.com/Sparkbots/Spark-documentation/">Website</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- footer end -->
+
+
 
 </body>
 

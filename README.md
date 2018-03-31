@@ -39,4 +39,4 @@ Then to start and view the docs locally you type this command:
 ```
 jekyll serve --incremental --config _config.local.yml
 ```
-Navigate to http://localhost:400 to see the website working.
+Navigate to http://localhost:4000 to see the website working.

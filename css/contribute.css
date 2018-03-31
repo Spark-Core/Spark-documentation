@@ -1,0 +1,49 @@
+.color.icon {
+    height: 56px;
+    width: 56px;
+    border-radius: 5px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: white;
+}
+.text-cell {
+    padding: 1.25rem 1.5rem !important
+}
+.icon-col {
+    width: 60px;
+}
+.icon-cell {
+    text-align: center;
+}
+
+#icons-example {
+    margin-top: 15px;
+}
+
+.icon.is-dark {
+    background-color: #363636
+}
+
+.icon.is-light {
+    background-color: #F5F5F5
+}
+
+.icon.is-link {
+    background-color: #3273DC
+}
+
+.icon.is-warning {
+    background-color: #FFDD57
+}
+
+.icon.is-success {
+    background-color: #23D160
+}
+
+.icon.is-danger {
+    background-color: #FF3860
+}
+
+.icon.is-purple {
+    background-color: #4B0082
+}

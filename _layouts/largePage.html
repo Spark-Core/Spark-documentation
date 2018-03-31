@@ -2,17 +2,19 @@
 layout: default
 ---
 <!-- opening hero -->
-<section class="hero is-dark is-medium">
+<section class="hero {{ page.color }} is-medium">
 
-        <div class="hero-body ">
-            <div class="container">
-                {% include {{ page.column }} %}
-    </div>
-      </div>
-    </section>
-
-    <section class="section">
+    <div class="hero-body ">
         <div class="container">
-            {{content}}
+            {% include {{ page.column }} %}
         </div>
-    </section>
+    </div>
+</section>
+{% if page.menu %} {% include {{page.menu}} %} {%endif%}
+<section class="section">
+
+    <div class="container">
+        {{content}}
+    </div>
+</section>
+<!-- opening hero end -->
