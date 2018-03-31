@@ -1,0 +1,110 @@
+---
+layout: largePage
+column: headers/documentation.html
+color: is-link
+title: Getting Started
+subtitle: Getting started with the Spark framework
+menu: menus/documentation/documentation.html
+---
+
+<h1 class="title">Installing Node.js</h1>
+
+This framework requires Node.js.<br>
+Click the button below to download v8.0 or higher.<br><br>
+<a href="https://nodejs.org/en/download/" class="button is-link">
+  <span class="icon is-small">
+    <i class="fab fa-node-js"></i>
+  </span>
+  <span><b>Download</b></span>
+</a> <br><br>
+
+After finishing the installation, restart your computer.<br><br>
+
+<h1 class="title">Setting up the bot</h1>
+
+Download a recommended code editor from below:<br><br>
+
+<div class="buttons">
+    <a href="https://atom.io" class="button is-link">
+        <span class="icon is-small icon-button">
+          <img src="/icons/atom-logo-no-bg.svg">
+        </span>
+        <span><b>Atom</b></span>
+      </a>
+      <a href="https://code.visualstudio.com/" class="button is-link">
+          <span class="icon is-small icon-button">
+            <img src="/icons/vsc-logo-no-bg.svg">
+          </span>
+          <span><b>Visual Studio Code</b></span>
+        </a>
+</div>
+
+After you have finished installation. Create a folder where you will create your bot files. In that folder, create a file; in this tutorial we will call it <b>bot.js</b><br>
+Paste the following code into the file.
+
+<pre>const Spark = require("sparkbots")
+Spark.start({
+prefix: "prefix-here",
+token: "token-here" })</pre><br>
+
+    Replace <code>prefix-here</code> with the desired prefix. For example <code>!</code> or <code>?</code>.<br><br>
+
+    <div class="box">
+            <div class="content">
+              <p>
+                  <i class="fas fa-exclamation-circle"></i> <strong>Important</strong>
+                <br>
+                Your prefix cannot have any spaces or the bot will exit with an error message.
+              </p>
+            </div>
+      </div>
+
+To get your bot token, click below to create an application.<br><br>
+
+<a href="https://discordapp.com/developers/applications/me/create" class="button is-link">
+  <span class="icon is-small">
+      <i class="fab fa-discord"></i>
+  </span>
+  <span><b>Create Application</b></span>
+</a><br><br>
+
+Enter your desired bot name under "App Name", enter your bot description, and an icon. Only "App Name" is required. <br>
+After the creation, scroll down to the "Bot" section and click "Create a Bot User".<br>
+Somewhere on your page, you should find:<br>
+<b>Token: Click to reveal</b><br>
+Click on it and copy the token. It should look something like this:<br>
+<code>NDAwMjIzNDI1OTE2MDQzMjY1.DTYgwQ.4z6d5gvUQ685jJhwFNYG_pCrBBo</code><br><br>
+
+Replace <code>token-here</code> with the token copied.<br><br>
+
+<div class="box">
+    <div class="content">
+      <p>
+          <i class="fas fa-exclamation-circle"></i> <strong>Important</strong>
+        <br>
+        Never share your token with anyone. The token provides anyone with access to controlling your bot.<br>
+        When compromised, reset your token <b>immediately</b> on the bot application page.
+      </p>
+    </div>
+</div>
+
+<h1 class="title">Starting the bot</h1>
+
+To start your bot, open a command prompt/terminal window. Navigate to the folder by using the cd command:
+<code>cd /folder-name/folder-name/etc.</code><br>
+When you are in the same folder as your bot file, type the command <code>npm install sparkbots</code> to install the Spark Framework. <br>
+After everything is finished, type <code>node bot.js</code> to start your bot.<br>
+If everything went correctly, you should recieve a reply on the window starting with:
+<pre>Your bot (bot-name) is now online! | Running on 1 servers
+</pre> <br>
+
+<code>bot-name</code> is the name you previously set in the application. <br> <br>
+
+You have now successfully set up your bot!<br><br>
+
+<a href="/documentation/commands" class="button is-link">
+  <span class="icon is-small">
+      <i class="fas fa-arrow-circle-right"></i>
+  </span>
+  <span><b>Creating Commands</b></span>
+</a>
