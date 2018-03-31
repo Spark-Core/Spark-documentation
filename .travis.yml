@@ -1,16 +1,13 @@
-language: node
-node_js:
-    - 8.10.0
+language: ruby
+rvm:
+    - 2.3.3
 
 
-before_install:
-    - rvm install 2.3.3
 install:
     - npm install
     - gem install jekyll html-proofer
 
 script:
-    - npm run fetch
     - jekyll build
     - htmlproofer ./_site --alt-ignore '/.*/'
 
