@@ -73,6 +73,9 @@
 .is-purple .navbar-item {
     color: white !important;
 }
+.tag {
+    margin-bottom: 0;
+}
 .tags .tag {
     margin-bottom: 0;
 }
