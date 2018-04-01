@@ -7,5 +7,83 @@ subtitle: Execute your code on certain text triggers.
 menu: menus/documentation/documentation.html
 ---
 
+<div class="content">
+<h1 class="title">Command Explanation</h1>
 
-Text about commands here.
+&#x3C;Insert explanation&#x3E;
+
+<br><br>
+<h1 class="title">Constructor</h1>
+
+<pre>
+var Spark = require("sparkbots")
+const Command = Spark.command("name-cmd")
+
+Command.addAlias("alias-1")
+Command.setLevel(0)
+
+Command.code = (client, message) => {
+
+  // Execute Code Here
+
+} 
+module.exports = Command;
+</pre>
+
+<h1 class="title">Methods</h1>
+
+<ul>
+  <li>
+      <p class="subtitle">addAlias(<span class="argument">Name</span>)</p>
+      <ul>
+          <li> 
+            <p class="is-inline-flex">Name</p>
+            <div class="tags has-addons first">
+              <span class="tag is-info">Type</span>
+              <span class="tag">string / array</span>
+            </div>
+          </li>
+      </ul>
+  </li>
+  <li>
+      <p class="subtitle">setLevel(<span class="argument">Number</span>)</p>
+      <ul>
+          <li> 
+            <p class="is-inline-flex">Number</p>
+            <div class="tags has-addons first">
+              <span class="tag is-info">Type</span>
+              <span class="tag">number</span>
+            </div>
+          </li>
+      </ul>
+  </li>
+  <li>
+    <p class="subtitle">allowDms(<span class="argument">Boolean</span>)</p>
+    <ul>
+        <li> 
+          <p class="is-inline-flex">Boolean</p>
+          <div class="tags has-addons first">
+            <span class="tag is-info">Type</span>
+            <span class="tag">boolean</span>
+          </div>
+        </li>
+    </ul>
+</li>
+</ul>
+
+
+
+<h1 class="title">Properties</h1>
+<ul>
+  <li>
+      <p class="subtitle is-inline-flex">level</p>
+      <div class="tags has-addons first">
+        <span class="tag is-info">Type</span>
+        <span class="tag">integer</span>
+      </div>
+      <div class="tags has-addons first">
+        <span class="tag is-danger">Required</span>
+      </div>
+    </li>
+  </ul>
+</div>
