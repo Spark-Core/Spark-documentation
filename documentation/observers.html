@@ -7,5 +7,97 @@ subtitle: Observe behaviour of messages or commands.
 menu: menus/documentation/documentation.html
 ---
 
+<div class="content">
 
-Text about observers here.
+    <h1 class="title"> Observer Explanation </h1>
+
+    <p> An observer is a "message function" that .... They are executed by.... Observers are the ... giving you the opportunity to use your creativity in .... 
+        <br><br>
+        Observers can be restricted to certain....
+        <br><br>
+        Spark already contains some pre-made observers for you including: ...
+        <br><br>
+        Below you will find out how to create an observer, as well as the methods and properties that may be used to help you with creating an observer.</p>
+          
+        
+            
+        <h1 class="title"> Constructor </h1>
+        
+        <p> To create an observer, you will need to create a new ".js" file inside the observers folder.
+        <br>
+            Below is an example of how a default observer file is structured: </p>
+        <br>
+        
+        <pre>
+            var Spark = require("sparkbots")
+            const Observer = Spark.observer("name")
+            
+            Observer.code = (client, message) => {
+            
+              // Execute Code Here
+            
+            }
+            module.exports = Observer;
+    </pre>
+        
+        
+        
+        <h1 class="title"> Methods </h1>
+        
+        <ul>
+          <li>
+              <p class="subtitle"> addAlias(<span class="argument"> Name </span>) </p>
+              <ul>
+                  <li>
+                    <p class="is-inline-flex"> Name </p>
+                    <div class="tags has-addons first">
+                      <span class="tag is-info"> Type </span>
+                      <span class="tag"> string / array </span>
+                    </div>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <p class="subtitle"> setLevel(<span class="argument"> Number </span>) </p>
+              <ul>
+                  <li>
+                    <p class="is-inline-flex"> Number </p>
+                    <div class="tags has-addons first">
+                      <span class="tag is-info"> Type </span>
+                      <span class="tag"> number </span>
+                    </div>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <p class="subtitle"> allowDms(<span class="argument"> Boolean </span>) </p>
+            <ul>
+                <li>
+                  <p class="is-inline-flex"> Boolean </p>
+                  <div class="tags has-addons first">
+                    <span class="tag is-info"> Type </span>
+                    <span class="tag"> boolean </span>
+                  </div>
+                </li>
+            </ul>
+        </li>
+        </ul>
+        
+        
+        
+        <h1 class="title"> Properties </h1>
+        <ul>
+          <li>
+              <p class="subtitle is-inline-flex"> level </p>
+              <div class="tags has-addons first">
+                <span class="tag is-info"> Type </span>
+                <span class="tag"> integer </span>
+              </div>
+              <div class="tags has-addons first">
+                <span class="tag is-danger"> Required </span>
+              </div>
+            </li>
+          </ul>
+        
+        </div>
+        

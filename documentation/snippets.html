@@ -7,5 +7,97 @@ subtitle: Functions you can use in the whole framework.
 menu: menus/documentation/documentation.html
 ---
 
+<div class="content">
 
-Text about snippets here.
+        <h1 class="title"> Snippet Explanation </h1>
+        
+        <p> A snippet is a.... They are executed....
+            <br><br>
+            Snippets can be restricted to....
+            <br><br>
+            Spark already contains some pre-made snippets for you including: ...
+            <br><br>
+            Below you will find out how to create a snippet, as well as the methods and properties that may be used to help you with creating a snippet.</p>
+          
+        
+            
+        <h1 class="title"> Constructor </h1>
+        
+        <p> To create a snippet, you will need to create a new ".js" file inside the snippets folder.
+        <br>
+            Below is an example of how a default snippet file is structured: </p>
+        <br>
+        
+        <pre>
+            var Spark = require("sparkbots")
+            const Snippet = Spark.snippet("Snippet-name")
+            
+            Snippet.code = () => {
+            
+              // Execute Code Here
+            
+            }
+            module.exports = Snippet;
+    </pre>
+        
+        
+        
+        <h1 class="title"> Methods </h1>
+        
+        <ul>
+          <li>
+              <p class="subtitle"> addAlias(<span class="argument"> Name </span>) </p>
+              <ul>
+                  <li>
+                    <p class="is-inline-flex"> Name </p>
+                    <div class="tags has-addons first">
+                      <span class="tag is-info"> Type </span>
+                      <span class="tag"> string / array </span>
+                    </div>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <p class="subtitle"> setLevel(<span class="argument"> Number </span>) </p>
+              <ul>
+                  <li>
+                    <p class="is-inline-flex"> Number </p>
+                    <div class="tags has-addons first">
+                      <span class="tag is-info"> Type </span>
+                      <span class="tag"> number </span>
+                    </div>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <p class="subtitle"> allowDms(<span class="argument"> Boolean </span>) </p>
+            <ul>
+                <li>
+                  <p class="is-inline-flex"> Boolean </p>
+                  <div class="tags has-addons first">
+                    <span class="tag is-info"> Type </span>
+                    <span class="tag"> boolean </span>
+                  </div>
+                </li>
+            </ul>
+        </li>
+        </ul>
+        
+        
+        
+        <h1 class="title"> Properties </h1>
+        <ul>
+          <li>
+              <p class="subtitle is-inline-flex"> level </p>
+              <div class="tags has-addons first">
+                <span class="tag is-info"> Type </span>
+                <span class="tag"> integer </span>
+              </div>
+              <div class="tags has-addons first">
+                <span class="tag is-danger"> Required </span>
+              </div>
+            </li>
+          </ul>
+        
+        </div>
+        
