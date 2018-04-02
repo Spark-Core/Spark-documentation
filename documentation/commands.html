@@ -11,35 +11,38 @@ menu: menus/documentation/documentation.html
 
     <h1 class="title"> What is a Command </h1>
 
-<p> A Command is an order that executes your code upon certain text triggers. They are executed by a user typing your bot prefix followed by a specific word/phrase that executes the code you have written to go with that word or phrase. Commands are the heart of every bot giving you the opportunity to use your creativity in making the best possible Commands that perform extraordinary tasks.</p>
-    <p>Commands can be restricted to certain permission levels as well as whether they can be carried out in DMs. You also have the opportunity to add aliases to your Commands, therefore giving users a variety of words or phrases to pick from to execute your code from an individual Command file. In addition, you can choose to disable a Command easily.</p>
-    <p>Spark already contains some pre-made Commands for you:
+<p> A Command is an order that executes your code upon certain text triggers. They are executed by a user typing your bot prefix followed by a specific word/phrase that executes the code you have written to go with that word or phrase. Commands are the heart of every bot giving you the opportunity to use your creativity in making the best possible Commands that perform extraordinary tasks. </p>
+    <p> Commands can be restricted to certain permission levels as well as whether they can be carried out in DMs. You also have the opportunity to add aliases to your Commands, therefore giving users a variety of words or phrases to pick from to execute your code from an individual Command file. In addition, you can choose to disable a Command easily. </p>
+    <p> Spark already contains some pre-made Commands for you: </p>
     <ul>
         <li>
             <h4 class="subtitle">about</h4>
-            <p>Shows information about the bot & framework.</p>
+            <p> Shows information about the bot & framework. </p>
         </li>
+        <br>
         <li>
             <h4 class="subtitle">ping</h4>
-            <p>Test the latency between Discord's servers and the bot.</p>
+            <p> Test the latency between Discord's servers and the bot. </p>
         </li>
+        <br>
         <li>
             <h4 class="subtitle">reload</h4>
-            <p>Allows the owner to reload modules without restarting.</p>
+            <p> Allows the owner to reload modules without restarting. </p>
         </li>
+        <br>
         <li>
             <h4 class="subtitle">reboot</h4>
-            <p>Allows the owner to restart the bot.</p>
+            <p> Allows the owner to restart the bot. </p>
         </li>
     </ul>
-    <p>Below you will find out how to create a Command, as well as the methods and properties that may be used to help you with creating a Command.</p>
+    <p> Below you will find out how to create a Command, as well as the methods and properties that may be used to help you with creating a Command. </p>
 
 
 
 <h1 class="title"> Constructor </h1>
 
-<p> To create a command, you will need to create a new ".js" file inside the commands folder.</p>
-<p>Below is an example of how a default command file is structured: </p>
+<p> To create a command, you will need to create a new ".js" file inside the commands folder. </p>
+<p> Below is an example of how a default command file is structured: </p>
 
 <pre>
 var Spark = require("sparkbots")
