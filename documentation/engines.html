@@ -1,7 +1,7 @@
 ---
 layout: largePage
 column: headers/documentation.html
-color: is-warning
+color: is-dark
 title: Engines
 subtitle: Execute actions upon startup.
 menu: menus/documentation/documentation.html
@@ -9,44 +9,44 @@ menu: menus/documentation/documentation.html
 
 <div class="content">
 
-        <h1 class="title"> Engine Explanation </h1>
+        <h1 class="title"> What is an Engine </h1>
 
-        <p> An engine is a "boot function" that runs upon launching your bot. All essential code that you want to have executed upon booting your bot should be placed in an engine. Engines can be used to send information or configure settings upon launch such as checking for updates or sending server counts to bot lists. 
-            <br><br>
-            Engines can be restricted to run at certain intervals of time. You also have the opportunity to set delays to the execution of a certain engine. In addition, you can choose to disable an engine easily.
-            <br><br>
-            Spark already contains some pre-made engines for you including: checkUpdate.
-            <br><br>
-            Below you will find out how to create an engine, as well as the methods that may be used to help you with creating an engine.</p>
+        <p> An Engine is a piece of code that runs upon launching your bot. All essential code that you want to have executed upon booting your bot should be placed in an Engine. Engines can be used to send information or configure settings upon launch such as checking for updates or sending server counts to bot lists.</p>
+            <p>Engines can be restricted to run at certain intervals of time. You also have the opportunity to set delays to the execution of a certain Engines. In addition, you can choose to disable an Engine easily.</p>
+            <p>Spark already contains some pre-made Engines for you including:</p>
+            <ul>
+                <li> <h4 class="subtitle">checkUpdate</h4>
+                <p> This is making sure your bot is up to date and you will be notified if it isn't.</p>
+            </li>
+            </ul>
+            <p>Below you will find out how to create an Engine, as well as the methods that may be used to help you with creating an Engine.</p>
 
-
-     
         <h1 class="title"> Constructor </h1>
-        
-        <p> To create an engine, you will need to create a new ".js" file inside the functions/engine folder.
+
+        <p> To create an Engine, you will need to create a new ".js" file inside the functions/engines folder.
         <br>
-            Below is an example of how a default engine file is structured: </p>
+            Below is an example of how a default Engine file is structured: </p>
         <br>
-        
+
         <pre>
                 var Spark = require("sparkbots")
                 const Engine = Spark.engine("name")
-                
+
                 Engine.setTime(number)
                 Engine.setDelay(number)
-                
+
                 Engine.code = (client, message) => {
-                
+
                   // Execute Code Here
-                
+
                 }
                 module.exports = Engine;
         </pre>
-        
-        
-        
+
+
+
         <h1 class="title"> Methods </h1>
-        
+
         <ul>
           <li>
               <p class="subtitle"> setTime(<span class="argument"> Number </span>) </p>
@@ -76,9 +76,9 @@ menu: menus/documentation/documentation.html
                 <p class="subtitle"> .disable(<span class="argument"></span>) </p>
           </li>
         </ul>
-        
-        
-       <!--        
+
+
+       <!--
         <h1 class="title"> Properties </h1>
         <ul>
           <li>
@@ -95,4 +95,3 @@ menu: menus/documentation/documentation.html
         -->
 
         </div>
-
