@@ -8,12 +8,25 @@ menu: menus/documentation/documentation.html
 ---
 
 <div class="content">
-<h1 class="title">Command Explanation</h1>
 
-&#x3C;Insert explanation&#x3E;
+<h1 class="title"> Command Explanation </h1>
 
-<br><br>
-<h1 class="title">Constructor</h1>
+<p> A command is an order that executes your code upon certain text triggers. They are executed by a user typing your bot prefix followed by a specific word/phrase that executes the code you have written to go with that word or phrase. Commands are the heart of every bot giving you the opportunity to use your creativity in making the best possible commands that perform extraordinary tasks. 
+    <br><br>
+    Commands can be restricted to certain permission levels as well as whether they can be carried out in DMs. You also have the opportunity to add aliases to your commands, therefore giving users a variety of words or phrases to pick from to execute your code from an individual command file.
+    <br><br>
+    Spark already includes some pre-made commands for you including: about, ping, help, reload & reboot.
+    <br><br>
+    Below you will find out how to create a command, as well as the methods and properties that may be used to help you with creating a command.</p>
+  
+
+    
+<h1 class="title"> Constructor </h1>
+
+<p> To create a command, you will need to create a new ".js" file inside the commands folder.
+<br>
+    Below is an example of how a default command file is structured: </p>
+<br>
 
 <pre>
 var Spark = require("sparkbots")
@@ -26,45 +39,47 @@ Command.code = (client, message) => {
 
   // Execute Code Here
 
-} 
+}
 module.exports = Command;
 </pre>
 
-<h1 class="title">Methods</h1>
+
+
+<h1 class="title"> Methods </h1>
 
 <ul>
   <li>
-      <p class="subtitle">addAlias(<span class="argument">Name</span>)</p>
+      <p class="subtitle"> addAlias(<span class="argument"> Name </span>) </p>
       <ul>
-          <li> 
-            <p class="is-inline-flex">Name</p>
+          <li>
+            <p class="is-inline-flex"> Name </p>
             <div class="tags has-addons first">
-              <span class="tag is-info">Type</span>
-              <span class="tag">string / array</span>
+              <span class="tag is-info"> Type </span>
+              <span class="tag"> string / array </span>
             </div>
           </li>
       </ul>
   </li>
   <li>
-      <p class="subtitle">setLevel(<span class="argument">Number</span>)</p>
+      <p class="subtitle"> setLevel(<span class="argument"> Number </span>) </p>
       <ul>
-          <li> 
-            <p class="is-inline-flex">Number</p>
+          <li>
+            <p class="is-inline-flex"> Number </p>
             <div class="tags has-addons first">
-              <span class="tag is-info">Type</span>
-              <span class="tag">number</span>
+              <span class="tag is-info"> Type </span>
+              <span class="tag"> number </span>
             </div>
           </li>
       </ul>
   </li>
   <li>
-    <p class="subtitle">allowDms(<span class="argument">Boolean</span>)</p>
+    <p class="subtitle"> allowDms(<span class="argument"> Boolean </span>) </p>
     <ul>
-        <li> 
-          <p class="is-inline-flex">Boolean</p>
+        <li>
+          <p class="is-inline-flex"> Boolean </p>
           <div class="tags has-addons first">
-            <span class="tag is-info">Type</span>
-            <span class="tag">boolean</span>
+            <span class="tag is-info"> Type </span>
+            <span class="tag"> boolean </span>
           </div>
         </li>
     </ul>
@@ -73,17 +88,18 @@ module.exports = Command;
 
 
 
-<h1 class="title">Properties</h1>
+<h1 class="title"> Properties </h1>
 <ul>
   <li>
-      <p class="subtitle is-inline-flex">level</p>
+      <p class="subtitle is-inline-flex"> level </p>
       <div class="tags has-addons first">
-        <span class="tag is-info">Type</span>
-        <span class="tag">integer</span>
+        <span class="tag is-info"> Type </span>
+        <span class="tag"> integer </span>
       </div>
       <div class="tags has-addons first">
-        <span class="tag is-danger">Required</span>
+        <span class="tag is-danger"> Required </span>
       </div>
     </li>
   </ul>
+
 </div>
