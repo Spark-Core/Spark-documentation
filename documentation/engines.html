@@ -7,8 +7,92 @@ subtitle: Execute actions upon startup.
 menu: menus/documentation/documentation.html
 ---
 
-<h1 class="title"> The use of an Engine </h1>
-<p> An engine is a "boot function" that runs upon launching your bot. All essential code that you want to have started upon booting your bot should be placed in an engine. </p>
-<br>
+<div class="content">
 
-Text about engines here.
+        <h1 class="title"> Engine Explanation </h1>
+
+        <p> An engine is a "boot function" that runs upon launching your bot. All essential code that you want to have executed upon booting your bot should be placed in an engine. Engines can be used to send information or configure settings upon launch such as checking for updates or sending server counts to bot lists. 
+            <br><br>
+            Engines can be restricted to run at certain intervals of time. You also have the opportunity to set delays to the execution of a certain engine. In addition, you can choose to disable an engine easily.
+            <br><br>
+            Spark already contains some pre-made engines for you including: checkUpdate.
+            <br><br>
+            Below you will find out how to create an engine, as well as the methods that may be used to help you with creating an engine.</p>
+
+
+     
+        <h1 class="title"> Constructor </h1>
+        
+        <p> To create an engine, you will need to create a new ".js" file inside the functions/engine folder.
+        <br>
+            Below is an example of how a default engine file is structured: </p>
+        <br>
+        
+        <pre>
+                var Spark = require("sparkbots")
+                const Engine = Spark.engine("name")
+                
+                Engine.setTime(number)
+                Engine.setDelay(number)
+                
+                Engine.code = (client, message) => {
+                
+                  // Execute Code Here
+                
+                }
+                module.exports = Engine;
+        </pre>
+        
+        
+        
+        <h1 class="title"> Methods </h1>
+        
+        <ul>
+          <li>
+              <p class="subtitle"> setTime(<span class="argument"> Number </span>) </p>
+              <ul>
+                  <li>
+                    <p class="is-inline-flex"> Number </p>
+                    <div class="tags has-addons first">
+                      <span class="tag is-info"> Type </span>
+                      <span class="tag"> number </span>
+                    </div>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <p class="subtitle"> setDelay(<span class="argument"> Number </span>) </p>
+              <ul>
+                  <li>
+                    <p class="is-inline-flex"> Number </p>
+                    <div class="tags has-addons first">
+                      <span class="tag is-info"> Type </span>
+                      <span class="tag"> number </span>
+                    </div>
+                  </li>
+              </ul>
+          </li>
+          <li>
+                <p class="subtitle"> .disable(<span class="argument"></span>) </p>
+          </li>
+        </ul>
+        
+        
+       <!--        
+        <h1 class="title"> Properties </h1>
+        <ul>
+          <li>
+              <p class="subtitle is-inline-flex"> level </p>
+              <div class="tags has-addons first">
+                <span class="tag is-info"> Type </span>
+                <span class="tag"> integer </span>
+              </div>
+              <div class="tags has-addons first">
+                <span class="tag is-danger"> Required </span>
+              </div>
+            </li>
+          </ul>
+        -->
+
+        </div>
+
