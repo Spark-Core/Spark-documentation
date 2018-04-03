@@ -82,12 +82,14 @@
 }
 .tags {
   margin-bottom: 0 !important;
+  vertical-align: middle
 }
 .tags:not(.has-addons){
   margin-right: 5px;
 }
 .tag {
   margin-bottom: 0 !important;
+  vertical-align: middle
 }
 .tags-block .tags {
   margin-left: 5px;
