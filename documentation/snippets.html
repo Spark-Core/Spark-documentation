@@ -9,24 +9,27 @@ menu: menus/documentation/documentation.html
 
 <div class="content">
 
-        <h1 class="title"> Snippet Explanation </h1>
-        
-        <p> A snippet is a.... They are executed....
-            <br><br>
-            Snippets can be restricted to....
-            <br><br>
-            Spark already contains some pre-made snippets for you including: ...
-            <br><br>
-            Below you will find out how to create a snippet, as well as the methods and properties that may be used to help you with creating a snippet.</p>
+        <h1 class="title"> What is a Snippet </h1>
+ 
+    <p> A Snippet is a function that you can use which will run in the entire framework. It is basically a global function that applies to your entire code. </p> 
+    <p> You can get a list of all the Snippets that there are. In addition, you can choose to disable a Snippet easily. </p>
+<!--
+    <p> Spark does not contain any pre-made Snippets for you: </p>
+    <ul>
+        <li>
+            <h4 class="subtitle">prefixHelp</h4>
+            <p> Identifies whether a message is a command by checking for its prefix. </p>
+        </li>
+    </ul>
+  -->
+    <p> Below you will find out how to create a Snippet, as well as the methods that may be used to help you with creating a Snippet file. </p>
           
         
             
         <h1 class="title"> Constructor </h1>
         
-        <p> To create a snippet, you will need to create a new ".js" file inside the snippets folder.
-        <br>
-            Below is an example of how a default snippet file is structured: </p>
-        <br>
+        <p> To create a Snippet, you will need to create a new ".js" file inside the functions/snippets folder. </p>
+        <p> Below is an example of how a default Snippet file is structured: </p>
         
         <pre>
             var Spark = require("sparkbots")
@@ -41,49 +44,21 @@ menu: menus/documentation/documentation.html
     </pre>
         
         
-        
+     
         <h1 class="title"> Methods </h1>
         
         <ul>
           <li>
-              <p class="subtitle"> addAlias(<span class="argument"> Name </span>) </p>
-              <ul>
-                  <li>
-                    <p class="is-inline-flex"> Name </p>
-                    <div class="tags has-addons first">
-                      <span class="tag is-info"> Type </span>
-                      <span class="tag"> string / array </span>
-                    </div>
-                  </li>
-              </ul>
+               <p class="subtitle"> .disable(<span class="argument"></span>) </p>
           </li>
+<br>
           <li>
-              <p class="subtitle"> setLevel(<span class="argument"> Number </span>) </p>
-              <ul>
-                  <li>
-                    <p class="is-inline-flex"> Number </p>
-                    <div class="tags has-addons first">
-                      <span class="tag is-info"> Type </span>
-                      <span class="tag"> number </span>
-                    </div>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <p class="subtitle"> allowDms(<span class="argument"> Boolean </span>) </p>
-            <ul>
-                <li>
-                  <p class="is-inline-flex"> Boolean </p>
-                  <div class="tags has-addons first">
-                    <span class="tag is-info"> Type </span>
-                    <span class="tag"> boolean </span>
-                  </div>
-                </li>
-            </ul>
-        </li>
+               <p class="subtitle"> client.snippets.list(<span class="argument"></span>) </p>
+               <p> Provides a list of all the Snippets that there are. </p>
+         </li>
         </ul>
-        
-        
+ 
+        <!--      
         
         <h1 class="title"> Properties </h1>
         <ul>
@@ -98,6 +73,7 @@ menu: menus/documentation/documentation.html
               </div>
             </li>
           </ul>
-        
+        --> 
+          
         </div>
         

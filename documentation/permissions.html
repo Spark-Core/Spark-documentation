@@ -9,11 +9,11 @@ menu: menus/documentation/documentation.html
 
 <div class="content">
 
-        <h1 class="title"> Permission Explanation </h1>
+        <h1 class="title"> What is a Permission </h1>
         
-        <p> A permission level is a...
-            <br><br>
-            Below you will find out the default permissions that already exist within Spark. You will also find out how to create a permission file, as well as the methods and properties that may be used to help you with creating a permission file.</p>
+        <p> A Permission level restricts a command to be used only by a certain group of users or an individual. For example, restricting users from restarting the bot but only allowing the owner to do so. Permission levels can come very handy to bot developers to restrict the use of commands to certain people. You can make as many permission levels as you want and assign certain people to those levels.</p>
+        <p> Permissions can be restricted to certain permission levels. In addition, you can choose to disable a Permission file easily. </p>
+        <p> Below you will find out the default, pre-made Permissions that already exist within Spark. You will also find out how to create a Permission file, as well as the methods and properties that may be used to help you with creating a Permission file. </p>
          
             
         
@@ -24,18 +24,18 @@ menu: menus/documentation/documentation.html
                   <p>
                       <i class="fas fa-exclamation-circle"></i> <strong>Important</strong>
                     <br>
-                    Listed below are the <b>default permissions</b> that already exist within Spark that you may use. However, you also have the option to override them and create your own.
+                    Listed below are the <b>default Permissions</b> that already exist within Spark that you may use. However, you also have the option to override them and create your own.
                   </p>
                 </div>
         </div>
 
         <ul>
           <li>
-              <p class="subtitle"> Member <span class="tag is-warning"> Level 0 </span> </p> 
+              <p class="subtitle"> Member <span class="tag is-dark"> Level 0 </span> </p> 
           </li>
 <br>
           <li>
-              <p class="subtitle"> Owner <span class="tag is-warning"> Level 10 </span> </p> 
+              <p class="subtitle"> Owner <span class="tag is-dark"> Level 10 </span> </p> 
           </li>
         </ul>
         
@@ -43,10 +43,8 @@ menu: menus/documentation/documentation.html
 
         <h1 class="title"> Constructor </h1>
         
-        <p> To create a permission file, you will need to create a new ".js" file inside the permissions folder.
-        <br>
-            Below is an example of how a default permission file is structured: </p>
-        <br>
+        <p> To create a Permission file, you will need to create a new ".js" file inside the permissions folder. </p>
+        <p> Below is an example of how a default Permission file is structured: </p>
         
         <pre>
                 var Spark = require("sparkbots")
@@ -69,18 +67,6 @@ menu: menus/documentation/documentation.html
         
         <ul>
           <li>
-              <p class="subtitle"> addAlias(<span class="argument"> Name </span>) </p>
-              <ul>
-                  <li>
-                    <p class="is-inline-flex"> Name </p>
-                    <div class="tags has-addons first">
-                      <span class="tag is-info"> Type </span>
-                      <span class="tag"> string / array </span>
-                    </div>
-                  </li>
-              </ul>
-          </li>
-          <li>
               <p class="subtitle"> setLevel(<span class="argument"> Number </span>) </p>
               <ul>
                   <li>
@@ -93,17 +79,8 @@ menu: menus/documentation/documentation.html
               </ul>
           </li>
           <li>
-            <p class="subtitle"> allowDms(<span class="argument"> Boolean </span>) </p>
-            <ul>
-                <li>
-                  <p class="is-inline-flex"> Boolean </p>
-                  <div class="tags has-addons first">
-                    <span class="tag is-info"> Type </span>
-                    <span class="tag"> boolean </span>
-                  </div>
-                </li>
-            </ul>
-        </li>
+              <p class="subtitle"> .disable(<span class="argument"></span>) </p>
+          </li>
         </ul>
 
         
@@ -120,6 +97,7 @@ menu: menus/documentation/documentation.html
                 <span class="tag is-danger"> Required </span>
               </div>
             </li>
+           <p> This can also be set by: <code> .setLevel() </code> </p>
           </ul>
         
         </div>
