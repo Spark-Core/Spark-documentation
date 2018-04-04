@@ -1,11 +1,97 @@
 ---
 layout: largePage
 column: headers/documentation.html
-color: is-warning
+color: is-dark
 title: Engines
-subtitle: Exectute acions at startup.
+subtitle: Execute actions upon startup
 menu: menus/documentation/documentation.html
 ---
 
+<div class="content">
 
-Text about engines here.
+        <h1 class="title"> What is an Engine </h1>
+
+        <p> An Engine is a piece of code that runs upon launching your bot. All essential code that you want to have executed upon booting your bot should be placed in an Engine. Engines can be used to send information or configure settings upon launch such as checking for updates or sending server counts to bot lists. </p>
+            <p> Engines can be restricted to run at certain intervals of time. You also have the opportunity to set delays to the execution of a certain Engine. In addition, you can choose to disable an Engine easily. </p>
+            <p> Spark already contains some pre-made Engines for you: </p>
+            <ul>
+                <li> <h4 class="subtitle">checkUpdate</h4>
+
+                <p> This is making sure your bot is up to date and you will be notified if it isn't. </p>
+            </li>
+            </ul>
+ <br>           
+            <p> Below you will find out how to create an Engine, as well as the methods that may be used to help you with creating an Engine. </p>
+
+        <h1 class="title"> Constructor </h1>
+
+        <p> To create an Engine, you will need to create a new ".js" file inside the functions/engines folder. </p>
+        <p> Below is an example of how a default Engine file is structured: </p>
+
+        <pre>
+                var Spark = require("sparkbots")
+                const Engine = Spark.engine("name")
+
+                Engine.setTime(number)
+                Engine.setDelay(number)
+
+                Engine.code = (client, message) => {
+
+                  // Execute Code Here
+
+                }
+                module.exports = Engine;
+        </pre>
+
+
+
+        <h1 class="title"> Methods </h1>
+
+        <ul>
+          <li>
+              <h4 class="subtitle"> setTime(<span class="argument"> Number </span>) </h4>
+              <ul>
+                  <li>
+                    <p class="is-inline-flex"> Number </p>
+                    <div class="tags has-addons first">
+                      <span class="tag is-info"> Type </span>
+                      <span class="tag"> number </span>
+                    </div>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4 class="subtitle"> setDelay(<span class="argument"> Number </span>) </h4>
+              <ul>
+                  <li>
+                    <p class="is-inline-flex"> Number </p>
+                    <div class="tags has-addons first">
+                      <span class="tag is-info"> Type </span>
+                      <span class="tag"> number </span>
+                    </div>
+                  </li>
+              </ul>
+          </li>
+          <li>
+                <h4 class="subtitle"> .disable(<span class="argument"></span>) </h4>
+          </li>
+        </ul>
+
+
+       <!--
+        <h1 class="title"> Properties </h1>
+        <ul>
+          <li>
+              <p class="subtitle is-inline-flex"> level </p>
+              <div class="tags has-addons first">
+                <span class="tag is-info"> Type </span>
+                <span class="tag"> integer </span>
+              </div>
+              <div class="tags has-addons first">
+                <span class="tag is-danger"> Required </span>
+              </div>
+            </li>
+          </ul>
+        -->
+
+        </div>

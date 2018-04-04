@@ -1,15 +1,12 @@
 language: ruby
 rvm:
     - 2.3.3
-
-
 install:
     - npm install
-    - gem install jekyll html-proofer
+    - gem install jekyll
 
 script:
     - jekyll build
-    - htmlproofer ./_site --alt-ignore '/.*/'
 
 deploy:
     provider: pages
@@ -22,10 +19,6 @@ deploy:
 branches:
   except:
     - gh-pages
-
-env:
-  global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
 sudo: false
 

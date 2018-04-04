@@ -29,7 +29,7 @@ menu: menus/contribute.html
             <p>This is used to announce to introduce to a subject</p>
             <p>Inside this subject you can use smaller headers to show a smaller topic:</p>
             <h4 class="subtitle"> Smaller headers</h1>
-                <pre>&#x3C;h4 class="subtitle"&#x3E;Smaller headers&#x3C;/h1&#x3E;</pre>
+                <pre>&#x3C;h4 class="subtitle"&#x3E;Smaller headers&#x3C;/h4&#x3E;</pre>
                 <p> For normal text, we just use regular paragraphs</p>
                 <pre>&#x3C;p&#x3E;Regular text&#x3C;/p&#x3E;</pre>
         </div>
@@ -136,14 +136,14 @@ menu: menus/contribute.html
             <tbody>
                 <tr>
                     <td class="icon-cell"><span class="icon color is-dark"></span></td>
-                    <td class="icon-cell"><span class="icon color is-light"></span></td>
-                    <td class="text-cell">Reserved</td>
+                    <td class="icon-cell"><span class="icon color is-dark"></span></td>
+                    <td class="text-cell">Specification of content</td>
                     <td>
                         <pre>&#x3C;span class=&#x22;tag is-dark&#x22;&#x3E;text&#x3C;/span&#x3E;</pre>
                     </td>
-                    <td>
-                        <pre>&#x3C;span class=&#x22;tag is-light&#x22;&#x3E;text&#x3C;/span&#x3E;</pre>
-                    </td>
+                    <td class="text-cell">
+                            This tag has just 1 side.
+                        </td>
                 </tr>
                 <tr>
                     <td class="icon-cell"><span class="icon color is-link"></span></td>
@@ -218,3 +218,37 @@ menu: menus/contribute.html
         </table>
     </div>
 </section>
+
+
+<section class="section">
+        <div class="container">
+            <h1 class="title"> Boxes </h1>
+    
+            <p> For messages and notes about important stuff, we structure it by having an exclamation mark followed by the word "Important". Then underneath what the actual important message is. All of this is contained in a box that is structured as follows:</p>
+
+        <pre>
+                &#x3C;div class=&#x22;box&#x22;&#x3E;
+                &#x3C;div class=&#x22;content&#x22;&#x3E;
+                      &#x3C;p&#x3E;
+                          &#x3C;i&#x3E; class=&#x22;fas fa-exclamation-circle&#x22;&#x3E;&#x3C;/i&#x3E; &#x3C;strong&#x3E;Important&#x3C;/strong&#x3E;
+                          &#x3C;br&#x3E;
+                        This is how an &#x3C;b&#x3E;important message&#x3C;/b&#x3E; should be structured.
+                      &#x3C;/p&#x3E;
+                      &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+        </pre>
+
+            <p> Here is an example of how it looks: </p>
+            <br>
+            <div class="box">
+                    <div class="content">
+                      <p>
+                          <i class="fas fa-exclamation-circle"></i> <strong>Important</strong>
+                        <br>
+                        This is how an <b>important message</b> should be structured.
+                      </p>
+                    </div>
+            </div>
+
+        </div>       
+    </section>
