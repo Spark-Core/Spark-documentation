@@ -17,7 +17,7 @@ color: is-dark
             el: document.getElementById("stats-downloads"),
             value: 0,
         });
-            $.get("https://spark-stats-homepage-6tdbby0qneos.runkit.sh/", function(data) {
+            $.get("https://api.discordspark.com/stats", function(data) {
                 var data = data.stats;
 
                 stats_gh.update(data.github);

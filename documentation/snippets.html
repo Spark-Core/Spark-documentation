@@ -1,11 +1,79 @@
 ---
 layout: largePage
 column: headers/documentation.html
-color: is-warning
+color: is-dark
 title: Snippets
-subtitle: Functions you can use in the whole framework.
+subtitle: Functions you can use in the whole framework
 menu: menus/documentation/documentation.html
 ---
 
+<div class="content">
 
-Text about snippets here.
+        <h1 class="title"> What is a Snippet </h1>
+ 
+    <p> A Snippet is a function that you can use which will run in the entire framework. It is basically a global function that applies to your entire code. </p> 
+    <p> You can get a list of all the Snippets that there are. In addition, you can choose to disable a Snippet easily. </p>
+<!--
+    <p> Spark does not contain any pre-made Snippets for you: </p>
+    <ul>
+        <li>
+            <h4 class="subtitle">prefixHelp</h4>
+            <p> Identifies whether a message is a command by checking for its prefix. </p>
+        </li>
+    </ul>
+  -->
+    <p> Below you will find out how to create a Snippet, as well as the methods that may be used to help you with creating a Snippet file. </p>
+          
+        
+            
+        <h1 class="title"> Constructor </h1>
+        
+        <p> To create a Snippet, you will need to create a new ".js" file inside the functions/snippets folder. </p>
+        <p> Below is an example of how a default Snippet file is structured: </p>
+        
+        <pre>
+            var Spark = require("sparkbots")
+            const Snippet = Spark.snippet("Snippet-name")
+            
+            Snippet.code = () => {
+            
+              // Execute Code Here
+            
+            }
+            module.exports = Snippet;
+    </pre>
+        
+        
+     
+        <h1 class="title"> Methods </h1>
+        
+        <ul>
+          <li>
+               <h4 class="subtitle"> .disable(<span class="argument"></span>) </h4>
+          </li>
+<br>
+          <li>
+               <h4 class="subtitle"> client.snippets.list(<span class="argument"></span>) </h4>
+               <p> Provides a list of all the Snippets that there are. </p>
+         </li>
+        </ul>
+ 
+        <!--      
+        
+        <h1 class="title"> Properties </h1>
+        <ul>
+          <li>
+              <p class="subtitle is-inline-flex"> level </p>
+              <div class="tags has-addons first">
+                <span class="tag is-info"> Type </span>
+                <span class="tag"> integer </span>
+              </div>
+              <div class="tags has-addons first">
+                <span class="tag is-danger"> Required </span>
+              </div>
+            </li>
+          </ul>
+        --> 
+          
+        </div>
+        

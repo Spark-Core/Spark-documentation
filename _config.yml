@@ -8,7 +8,7 @@ env:           "production"
 
 markdown:      kramdown
 permalink:     pretty
-url:           https://discordspark.tk
+url:           https://discordspark.com
 
 # Variables
 

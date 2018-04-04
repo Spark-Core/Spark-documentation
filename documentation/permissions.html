@@ -1,11 +1,104 @@
 ---
 layout: largePage
 column: headers/documentation.html
-color: is-danger
+color: is-dark
 title: Permissions
-subtitle: Lock certain commands to certain people.
+subtitle: Restrict certain commands to specific users
 menu: menus/documentation/documentation.html
 ---
 
+<div class="content">
 
-Text about permissions here.
+        <h1 class="title"> What is a Permission </h1>
+        
+        <p> A Permission level restricts a command to be used only by a certain group of users or an individual. For example, restricting users from restarting the bot but only allowing the owner to do so. Permission levels can come very handy to bot developers to restrict the use of commands to certain people. You can make as many permission levels as you want and assign certain people to those levels.</p>
+        <p> Permissions can be restricted to certain permission levels. In addition, you can choose to disable a Permission file easily. </p>
+        <p> Below you will find out the default, pre-made Permissions that already exist within Spark. You will also find out how to create a Permission file, as well as the methods and properties that may be used to help you with creating a Permission file. </p>
+         
+            
+        
+        <h1 class="title"> Default Permissions </h1>
+        
+        <div class="box">
+                <div class="content">
+                  <p>
+                      <i class="fas fa-exclamation-circle"></i> <strong>Important</strong>
+                    <br>
+                    Listed below are the <b>default Permissions</b> that already exist within Spark that you may use. However, you also have the option to override them and create your own.
+                  </p>
+                </div>
+        </div>
+
+        <ul>
+          <li>
+              <h4 class="subtitle"> Member <span class="tag is-dark"> Level 0 </span> </h4> 
+          </li>
+<br>
+          <li>
+              <h4 class="subtitle"> Owner <span class="tag is-dark"> Level 10 </span> </h4> 
+          </li>
+        </ul>
+        
+
+
+        <h1 class="title"> Constructor </h1>
+        
+        <p> To create a Permission file, you will need to create a new ".js" file inside the permissions folder. </p>
+        <p> Below is an example of how a default Permission file is structured: </p>
+        
+        <pre>
+                var Spark = require("sparkbots")
+                const Permission = Spark.permission("Member")
+
+                Permission.setLevel(0)
+
+                Permission.code = () => {
+
+                    return true // Blocks execution
+                    return false // Completes execution
+                
+                }
+                module.exports = Permission;
+        </pre>
+
+
+
+        <h1 class="title"> Methods </h1>
+        
+        <ul>
+          <li>
+              <h4 class="subtitle"> setLevel(<span class="argument"> Number </span>) </h4>
+              <ul>
+                  <li>
+                    <p class="is-inline-flex"> Number </p>
+                    <div class="tags has-addons first">
+                      <span class="tag is-info"> Type </span>
+                      <span class="tag"> number </span>
+                    </div>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4 class="subtitle"> .disable(<span class="argument"></span>) </h4>
+          </li>
+        </ul>
+
+        
+        
+        <h1 class="title"> Properties </h1>
+        <ul>
+          <li>
+              <p class="subtitle is-inline-flex"> level </p>
+              <div class="tags has-addons first">
+                <span class="tag is-info"> Type </span>
+                <span class="tag"> integer </span>
+              </div>
+              <div class="tags has-addons first">
+                <span class="tag is-danger"> Required </span>
+              </div>
+            </li>
+           <p> This can also be set by: <code> .setLevel() </code> </p>
+          </ul>
+        
+        </div>
+

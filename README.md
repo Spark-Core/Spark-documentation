@@ -18,7 +18,7 @@ This software is only used for internal development. We can't promise support / 
 - Claim your hosted version is official.
 - Editing and hosting without up to date information and / or invalid information.
 - Host for public use and tell other users to use your host.
-- Forcing other users to use your version of this software instead of the official host (https://discordspark.tk/).
+- Forcing other users to use your version of this software instead of the official host (https://discordspark.com/).
 - Providing documentation.
 - Trying to find loopholes, bugs, errors, etc. in the software without reporting them [here](https://github.com/sparkbots/Spark-documenation/issues).
 
