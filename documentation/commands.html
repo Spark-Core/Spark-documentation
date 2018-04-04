@@ -1,11 +1,125 @@
 ---
 layout: largePage
 column: headers/documentation.html
-color: is-info
+color: is-dark
 title: Commands
-subtitle: Execute your code on certain text triggers.
+subtitle: Execute your code on certain text triggers
 menu: menus/documentation/documentation.html
 ---
 
+<div class="content">
 
-Text about commands here.
+    <h1 class="title"> What is a Command </h1>
+
+<p> A Command is an order that executes your code upon certain text triggers. They are executed by a user typing your bot prefix followed by a specific word/phrase that executes the code you have written to go with that word or phrase. Commands are the heart of every bot giving you the opportunity to use your creativity in making the best possible Commands that perform extraordinary tasks. </p>
+    <p> Commands can be restricted to certain permission levels as well as whether they can be carried out in DMs. You also have the opportunity to add aliases to your Commands, therefore giving users a variety of words or phrases to pick from to execute your code from an individual Command file. In addition, you can choose to disable a Command easily. </p>
+    <p> Spark already contains some pre-made Commands for you: </p>
+    <ul>
+        <li>
+            <h4 class="subtitle">about</h4>
+            <p> Shows information about the bot & framework. </p>
+        </li>
+        <br>
+        <li>
+            <h4 class="subtitle">ping</h4>
+            <p> Test the latency between Discord's servers and the bot. </p>
+        </li>
+        <br>
+        <li>
+            <h4 class="subtitle">reload</h4>
+            <p> Allows the owner to reload modules without restarting. </p>
+        </li>
+        <br>
+        <li>
+            <h4 class="subtitle">reboot</h4>
+            <p> Allows the owner to restart the bot. </p>
+        </li>
+    </ul>
+    <br>
+    <p> Below you will find out how to create a Command, as well as the methods and properties that may be used to help you with creating a Command. </p>
+
+
+
+<h1 class="title"> Constructor </h1>
+
+<p> To create a Command, you will need to create a new ".js" file inside the commands folder. </p>
+<p> Below is an example of how a default Command file is structured: </p>
+
+<pre>
+var Spark = require("sparkbots")
+const Command = Spark.command("name-cmd")
+
+Command.addAlias("alias-1")
+Command.setLevel(0)
+
+Command.code = (client, message) => {
+
+  // Execute Code Here
+
+}
+module.exports = Command;
+</pre>
+
+
+
+<h1 class="title"> Methods </h1>
+
+<ul>
+  <li>
+      <h4 class="subtitle"> addAlias(<span class="argument"> Name </span>) </h4>
+      <ul>
+          <li>
+            <p class="is-inline-flex"> Name </p>
+            <div class="tags has-addons first">
+              <span class="tag is-info"> Type </span>
+              <span class="tag"> string / array </span>
+            </div>
+          </li>
+      </ul>
+  </li>
+  <li>
+      <h4 class="subtitle"> setLevel(<span class="argument"> Number </span>) </h4>
+      <ul>
+          <li>
+            <p class="is-inline-flex"> Number </p>
+            <div class="tags has-addons first">
+              <span class="tag is-info"> Type </span>
+              <span class="tag"> number </span>
+            </div>
+          </li>
+      </ul>
+  </li>
+  <li>
+    <h4 class="subtitle"> allowDms(<span class="argument"> Boolean </span>) </h4>
+    <ul>
+        <li>
+          <p class="is-inline-flex"> Boolean </p>
+          <div class="tags has-addons first">
+            <span class="tag is-info"> Type </span>
+            <span class="tag"> boolean </span>
+          </div>
+        </li>
+    </ul>
+</li>
+<li>
+    <h4 class="subtitle"> .disable(<span class="argument"></span>) </h4>
+</li>
+</ul>
+
+
+
+<h1 class="title"> Properties </h1>
+<ul>
+  <li>
+      <p class="subtitle is-inline-flex"> level </p>
+      <div class="tags has-addons first">
+        <span class="tag is-info"> Type </span>
+        <span class="tag"> integer </span>
+      </div>
+      <div class="tags has-addons first">
+        <span class="tag is-danger"> Required </span>
+      </div>
+    </li>
+  </ul>
+
+</div>

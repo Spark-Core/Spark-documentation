@@ -73,13 +73,34 @@
 .is-purple .navbar-item {
     color: white !important;
 }
-.tags .tag {
-    margin-bottom: 0;
-}
-.tags:last-child {
-
-    margin-bottom: 0;
-}
 .button.is-purple {
     border-color: transparent;
 }
+.first {
+  display: inline-flex;
+  margin-left: 15px;
+}
+.tags {
+  margin-bottom: 0 !important;
+  vertical-align: middle
+}
+.tags:not(.has-addons){
+  margin-right: 5px;
+}
+.tag {
+  margin-bottom: 0 !important;
+  vertical-align: middle
+}
+.tags-block .tags {
+  margin-left: 5px;
+}
+.tags:last-child {
+  margin-bottom: 0 !important;
+}
+.icon.margin-right {
+    margin-right: 3px !important;
+    }
+.icon.margin-left {
+     margin-left: 3px !important;
+    }
+    
