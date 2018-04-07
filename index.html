@@ -18,8 +18,6 @@ color: is-dark
             value: 0,
         });
             $.get("https://api.discordspark.com/stats", function(data) {
-                var data = data.stats;
-
                 stats_gh.update(data.github);
                 stats_downloads.update(data.downloads);
                 $("#stats-version").html(data.version)
