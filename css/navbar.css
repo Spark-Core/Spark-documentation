@@ -103,4 +103,14 @@
 .icon.margin-left {
      margin-left: 3px !important;
     }
-    
+.list-up {
+    margin-top: 35px !important;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .field.mobile {
+        width: 250px;
+        float: right;
+    }
+}

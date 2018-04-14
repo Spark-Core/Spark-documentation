@@ -1,0 +1,32 @@
+---
+layout: largePage
+column: headers/documentation.html
+menu: menus/errors.html
+color: is-danger
+title: Error documentation
+subtitle: Your node version is not up to date
+---
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h1> The problem </h1>
+            <p>Spark only supports Nodejs versions 8 and higher. This is because we use the promise and async/await features.
+            Although version 7 supports this, it's only used in an experimental stage and only works with experimental flags. This is we choose to not support this version at all to prevent basic errors.</p>
+            <h1> The Solution</h1>
+            <p> Simply go to the Nodejs website and download the latest installer.</p>
+            <a href="https://nodejs.org/en/download/" class="button is-warning">
+              <span class="icon is-small">
+                <i class="fab fa-node-js"></i>
+              </span>
+              <span><b>Download</b></span>
+            </a>
+            <p> We assume you know how to do this because you have at least done this once before.</p>
+            <p> If you're not succeeding please Google around for some up to date guides.</p>
+
+            <!-- need help button -->
+                        <div class="has-text-centered">
+                            <a href="https://discord.gg/TezD2Zg" class="button is-warning"><span class="icon margin-right"><i class="fab fa-discord"></i></span> Need more help?</a>
+                        </div>
+        </div>
+    </div>
+</section>
