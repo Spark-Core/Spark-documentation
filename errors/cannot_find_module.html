@@ -1,0 +1,37 @@
+---
+layout: largePage
+column: headers/documentation.html
+color: is-danger
+title: Error documentation
+subtitle: You don't have the Spark packages installed
+---
+<section class="section">
+    <div class="container">
+        <div class="content">
+            <h1> The problem </h1>
+            <p>When trying to start your bot you might run into an error like this: </p>
+            <pre>
+        Error: Cannot find module 'sparkbots'
+            at Function.Module._resolveFilename (module.js:470:15)
+            at Function.Module._load (module.js:418:25)
+            at Module.require (module.js:498:17)
+            at require (internal/module.js:20:19)
+            at Object.<anonymous> (Y:\BossHunter\bot.js:1:77)
+            at Module._compile (module.js:571:32)
+            at Object.Module._extensions..js (module.js:580:10)
+            at Module.load (module.js:488:32)
+            at tryModuleLoad (module.js:447:12)
+            at Function.Module._load (module.js:439:3)
+            </pre>
+            <p> This means the node process can't find the <b>sparkbots</b> package, it's either because you didn't install it yet, or you moved files / locations without keeping the packages updated.
+            <h1> The Solution</h1>
+            <p> Open your command prompt and cd into your directory where you have your bot files.</p>
+            <p>Then type this command into your console: <code>npm install sparkbots</code> </p>
+
+            <!-- need help button -->
+                        <div class="has-text-centered">
+                            <a href="https://discord.gg/TezD2Zg" class="button is-warning"><span class="icon margin-right"><i class="fab fa-discord"></i></span> Need more help?</a>
+                        </div>
+        </div>
+    </div>
+</section>

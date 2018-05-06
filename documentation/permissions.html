@@ -47,18 +47,18 @@ menu: menus/documentation/documentation.html
         <p> Below is an example of how a default Permission file is structured: </p>
         
         <pre>
-                var Spark = require("sparkbots")
-                const Permission = Spark.permission("Member")
+var Spark = require("sparkbots")
+const Permission = Spark.permission("Member")
 
-                Permission.setLevel(0)
+Permission.setLevel(0)
 
-                Permission.code = () => {
+Permission.code = (client, message) => {
 
-                    return true // Blocks execution
-                    return false // Completes execution
+    return true // Blocks execution
+    return false // Completes execution
                 
-                }
-                module.exports = Permission;
+}
+module.exports = Permission;
         </pre>
 
 
