@@ -10,6 +10,7 @@ menu: menus/releases/releases.html
     <h1 version="0.1"> Version 0.1
         <span class="tag is-danger"> Beta </span>
    </h1>
+    <h4 class="subtitle">Do not use beta versions in production software, as they can be unstable. Use <a onclick="scrollVersion('0.0.6')">a stable version</a> instead.</h4>
     <br>
     <h4 class="subtitle">New in this update:</h4>
     <ul>
@@ -17,6 +18,8 @@ menu: menus/releases/releases.html
         <li>[<a href="https://github.com/Sparkbots/Spark/commit/8517a960870818b1fccd8b86f7a1f71834ad4d41">8517a96</a>] Created a default about command for information about spark and the bot.</li>
         <li>[<a href="https://github.com/Sparkbots/Spark/commit/8235ea31ac64a320958916dcf5ab7320b499d28b">8235ea3</a>] Created disable feature to deactivate desired parts of the framework.</li>
         <li>[<a href="https://github.com/Sparkbots/Spark/commit/085a331216e06b4ed8b257194729a8c04d20f317">085a331</a>] Created event loader.</li>
+        <li>[<a href="https://github.com/Sparkbots/Spark/commit/9afd78c6b2b4d198c90e4339736b2e9858896781">9afd78</a>] Added warning if Node version was &#x3C;=8 .</li>
+        <li>[<a href="https://github.com/Sparkbots/Spark/commit/4e3239b1fe77532f0966f91d4a3d6302588754a8">4e3239</a>] Added way to add custom fields to built-in help command.</li>
     </ul>
     <h4 class="subtitle">Improved in this update:</h4>
     <ul>
@@ -25,7 +28,15 @@ menu: menus/releases/releases.html
         <li>[<a href="https://github.com/Sparkbots/Spark/commit/c2a49d4ca540986aabd6b228dda2321d54250c66">c2a49d4</a>] Renamed Boot Function to Engine.</li>
         <li>[<a href="https://github.com/Sparkbots/Spark/commit/877b9bef3d7114dd1f0273e2175b0d107170d726">877b9be</a>] Renamed disabledChannels(string) to allowDms(boolean).</li>
         <li>[<a href="https://github.com/Sparkbots/Spark/commit/2f70ca8500aeda64c58f2ffce6d6e2fef97aa8ad">2f70ca8</a>] Added ignoreBots to customConfigs.</li>
+        <li>[<a href="https://github.com/Sparkbots/Spark/commit/e13888baac3953c8fc0b9a0509f7cdf1cfba512f">e13888</a>] Fixed about command bug where the fields keep adding up.</li>
+        <li>[<a href="https://github.com/Sparkbots/Spark/commit/34aff86b18850c39ed04f90cc11ecee5c80b4fcb">34aff8</a>] Prefixes are now properly stored for custom configs.</li>
+        <li>[<a href="https://github.com/Sparkbots/Spark/commit/53580a90abbc9a58869bf2161a09aeeec10d5589">53580a</a>] Update notices have improved.</li>
+        <li>[<a href="https://github.com/Sparkbots/Spark/commit/15c262db7ba86d69bf61ceacf0a76d2bc2af1cd7">15c262</a>] Help command now supports more then 25 commands.</li>
+        <li>[<a href="https://github.com/Sparkbots/Spark/commit/3cd2b8dfb80a54aaa6f6c529f7982acf5a1e6129">3cd2b8</a>] Removed custom config prefix bug.</li>
+
     </ul>
+    <h4 class="subtitle">To install:</h4>
+    <code>npm install sparkbots@beta</code>
     <hr>
 
     <h1 version="0.0.6"> Version 0.0.6
@@ -44,7 +55,8 @@ menu: menus/releases/releases.html
         <li>[<a href="https://github.com/Sparkbots/Spark/commit/f43bff46ebc62a910d73a4d38e8ca8cbe966e72f">f43bff4</a>] Spaces in a prefix is no longer accepted.</li>
         <li>[<a href="https://github.com/Sparkbots/Spark/commit/ddd7e5753a3f077e3fc12af306d236ff5dae64ce">ddd7e57</a>] Level export is now created on default when using createcommand.</li>
     </ul>
-
+    <h4 class="subtitle">To install:</h4>
+    <code>npm install sparkbots@0.0.6</code>
 </div>
 <hr>
 <div class="box">
@@ -60,11 +72,11 @@ menu: menus/releases/releases.html
 
 
 <script>
-    function scrollVersion(v){
+    function scrollVersion(v) {
         console.log($("h1[version='" + v + "']"))
-            $('html, body').animate({
-                scrollTop: $("h1[version='" + v + "']").offset().top
-            }, 2000);
+        $('html, body').animate({
+            scrollTop: $("h1[version='" + v + "']").offset().top
+        }, 2000);
     }
 </script>
 

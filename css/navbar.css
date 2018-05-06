@@ -90,6 +90,10 @@
 .tag {
   margin-bottom: 0 !important;
   vertical-align: middle
+  -webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
 }
 .tags-block .tags {
   margin-left: 5px;
@@ -103,4 +107,16 @@
 .icon.margin-left {
      margin-left: 3px !important;
     }
-    
+.list-up {
+    margin-top: 35px !important;
+}
+.baseline {
+    vertical-align: baseline !important;
+}
+
+@media screen and (min-width: 1024px) {
+    .field.mobile {
+        width: 250px;
+        float: right;
+    }
+}

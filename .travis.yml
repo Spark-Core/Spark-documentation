@@ -25,9 +25,10 @@ sudo: false
 notifications:
   webhooks:
     urls:
-      - https://travis---discord-webhook-gk6taungzyj7.runkit.sh/
+      - https://api.discordspark.com/travis
     on_success: always
     on_failure: always
     on_start: always
     on_cancel: always
     on_error: always
+  email: false

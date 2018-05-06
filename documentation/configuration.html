@@ -1,0 +1,215 @@
+---
+layout: largePage
+column: headers/documentation.html
+color: is-dark
+title: Configuration options
+subtitle: Customize spark's behaviour.
+menu: menus/documentation/documentation.html
+---
+<div class="content">
+
+    <h1 class="title"> Configuration for your bot </h1>
+    <p> With configuration we mean configurating either the global behaviour, like for example default prefix(es).</p>
+    <p> We can also mean customizable options for certain servers only.</p>
+
+
+    <h1 class="title">Editing the configurations</h1>
+    <p> There are multiple ways to change the configuration file, the first one is to change options in your bot file:</p>
+    <pre>
+    const Spark = require("sparkbots")
+    Spark.start({
+    prefix: "!",
+    token: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    option1: "value1" })
+</pre>
+    <p> Another option is to edit it directly into the core (<code>client.config.&lt;property&gt;</code>)</p>
+    <p class="is-inline-flex" style="margin-right: 14px"> You can also change it it for 1 guild only, like this:</p>
+    <span class="tag is-success is-inline-flex">New: V0.1</span>
+    <pre>guild.customConfig.prefix = ["!", "+"]</pre>
+    <p> Or: </p>
+    <pre>client.customConfig.set("guild-id", {prefix: ["!", "+"]})</pre>
+
+    <h1 class="title">Properties</h1>
+    <h4 class="subtitle">You can also add your own properties, these are just the ones having built-in support</h4>
+    <ul>
+        <li>
+            <p class="subtitle is-inline-flex">prefix</p>
+            <span class="tag is-dark baseline" style="margin-left: 14px;"> beforehand <span class="icon margin-left"><i class="fa fa-check"></i></span></span>
+            <span class="tag is-dark baseline"> in-code <span class="icon margin-left" ><i class="fa fa-check"></i></span></span>
+            <span class="tag is-dark baseline"> custom <span class="icon margin-left"><i class="fa fa-check"></i></span></span>
+            <div class="tags has-addons is-inline-flex">
+                <span class="tag is-link">Type</span>
+                <span class="tag">Array ( String )</span>
+            </div>
+        </li>
+        <li>
+            <p class="subtitle is-inline-flex">ignoreBots</p>
+            <span class="tag is-dark baseline" style="margin-left: 14px;"> beforehand <span class="icon margin-left"><i class="fa fa-check"></i></span></span>
+            <span class="tag is-dark baseline"> in-code <span class="icon margin-left" ><i class="fa fa-check"></i></span></span>
+            <span class="tag is-dark baseline"> custom <span class="icon margin-left"><i class="fa fa-check"></i></span></span>
+            <div class="tags has-addons is-inline-flex">
+                <span class="tag is-link">Type</span>
+                <span class="tag">boolean</span>
+            </div>
+        </li>
+        <li>
+            <p class="subtitle is-inline-flex">token</p>
+            <span class="tag is-dark baseline" style="margin-left: 14px;"> beforehand <span class="icon margin-left"><i class="fa fa-check"></i></span></span>
+            <span class="tag is-dark baseline"> in-code <span class="icon margin-left" ><i class="fa fa-times"></i></span></span>
+            <span class="tag is-dark baseline"> custom <span class="icon margin-left"><i class="fa fa-times"></i></span></span>
+            <span class="tag is-danger baseline"> Required </span>
+            <div class="tags has-addons is-inline-flex">
+                <span class="tag is-link">Type</span>
+                <span class="tag">String</span>
+            </div>
+        </li>
+        <li>
+            <p class="subtitle is-inline-flex">disabled</p>
+            <span class="tag is-dark baseline" style="margin-left: 14px;"> beforehand <span class="icon margin-left"><i class="fa fa-check"></i></span></span>
+            <span class="tag is-dark baseline"> in-code <span class="icon margin-left" ><i class="fa fa-check"></i></span></span>
+            <span class="tag is-dark baseline"> custom <span class="icon margin-left"><i class="fa fa-check"></i></span></span>
+            <div class="tags has-addons is-inline-flex">
+                <span class="tag is-link">Type</span>
+                <span class="tag">disableCache</span>
+            </div>
+        </li>
+        <li>
+            <p class="subtitle is-inline-flex">clientOptions</p>
+            <span class="tag is-dark baseline" style="margin-left: 14px;"> beforehand <span class="icon margin-left"><i class="fa fa-check"></i></span></span>
+            <span class="tag is-dark baseline"> in-code <span class="icon margin-left" ><i class="fa fa-times"></i></span></span>
+            <span class="tag is-dark baseline"> custom <span class="icon margin-left"><i class="fa fa-times"></i></span></span>
+            <div class="tags has-addons is-inline-flex">
+                <span class="tag is-link">Type</span>
+                <span class="tag"><a href="https://discord.js.org/#/docs/main/stable/typedef/ClientOptions">clientOptions</a></span>
+            </div>
+        </li>
+        <li>
+            <p class="subtitle is-inline-flex">ownerID</p>
+            <span class="tag is-dark baseline" style="margin-left: 14px;"> beforehand <span class="icon margin-left"><i class="fa fa-check"></i></span></span>
+            <span class="tag is-dark baseline"> in-code <span class="icon margin-left" ><i class="fa fa-check"></i></span></span>
+            <span class="tag is-dark baseline"> custom <span class="icon margin-left"><i class="fa fa-times"></i></span></span>
+            <div class="tags has-addons is-inline-flex">
+                <span class="tag is-link">Type</span>
+                <span class="tag"><a href="https://discord.js.org/#/docs/main/stable/typedef/Snowflake">Snowflake</a></span>
+            </div>
+            <div class="tags has-addons is-inline-flex">
+                <span class="tag is-purple">Default</span>
+                <span class="tag">Bot app creator's id</span>
+            </div>
+        </li>
+        <li>
+            <p class="subtitle is-inline-flex">embedColor</p>
+            <span class="tag is-dark baseline" style="margin-left: 14px;"> beforehand <span class="icon margin-left"><i class="fa fa-check"></i></span></span>
+            <span class="tag is-dark baseline"> in-code <span class="icon margin-left" ><i class="fa fa-check"></i></span></span>
+            <span class="tag is-dark baseline"> custom <span class="icon margin-left"><i class="fa fa-times"></i></span></span>
+            <div class="tags has-addons is-inline-flex">
+                <span class="tag is-link">Type</span>
+                <span class="tag">hexadecimal</span>
+            </div>
+            <div class="tags has-addons is-inline-flex">
+                <span class="tag is-purple">Default</span>
+                <span class="tag">0xffe13f</span>
+            </div>
+        </li>
+        <li>
+            <p class="subtitle is-inline-flex">ignoreUpdate</p>
+            <span class="tag is-dark baseline" style="margin-left: 14px;"> beforehand <span class="icon margin-left"><i class="fa fa-check"></i></span></span>
+            <span class="tag is-dark baseline"> in-code <span class="icon margin-left" ><i class="fa fa-check"></i></span></span>
+            <span class="tag is-dark baseline"> custom <span class="icon margin-left"><i class="fa fa-times"></i></span></span>
+            <div class="tags has-addons is-inline-flex">
+                <span class="tag is-link">Type</span>
+                <span class="tag">Boolean / Array (string)</span>
+            </div>
+            <div class="tags has-addons is-inline-flex">
+                <span class="tag is-purple">Default</span>
+                <span class="tag">null</span>
+            </div>
+        </li>
+        <li>
+            <p class="subtitle is-inline-flex">first</p>
+            <span class="tag is-dark baseline" style="margin-left: 14px;"> beforehand <span class="icon margin-left"><i class="fa fa-check"></i></span></span>
+            <span class="tag is-dark baseline"> in-code <span class="icon margin-left" ><i class="fa fa-times"></i></span></span>
+            <span class="tag is-dark baseline"> custom <span class="icon margin-left"><i class="fa fa-times"></i></span></span>
+            <div class="tags has-addons is-inline-flex">
+                <span class="tag is-link">Type</span>
+                <span class="tag">boolean</span>
+            </div>
+
+        </li>
+    </ul>
+    <div class="box">
+        <div class="content">
+            <p class="title is-5"><i class="fas fa-exclamation-circle"></i> <strong>Important</strong></p>
+                <p>- The <b>first</b> property is only for internal usage, changing this could cause unexpected results.</p>
+                <p>- The <b>prefix</b> property can not be a string.</p>
+                <p>- <b>EmbedColor</b> means the color we used for the pre-built help and info commands, if you plan to override those, you can just leave them blank.</p>
+        </div>
+    </div>
+    <h1 class="title">Methods</h1>
+    <ul>
+        <li>
+            <p class="subtitle is-inline-flex">setPrefix( Prefix )</p>
+            <span class="tag is-dark baseline" style="margin-left: 14px;"> beforehand <span class="icon margin-left"><i class="fa fa-times"></i></span></span>
+            <span class="tag is-dark baseline"> in-code <span class="icon margin-left" ><i class="fa fa-times"></i></span></span>
+            <span class="tag is-dark baseline"> custom <span class="icon margin-left"><i class="fa fa-check"></i></span></span>
+            <ul>
+                  <li>
+                    <p class="is-inline-flex"> Prefix </p>
+                    <div class="tags has-addons is-inline-flex"style="margin-left: 14px">
+                      <span class="tag is-info"> Type </span>
+                      <span class="tag"> String / Array( String ) </span>
+                    </div>
+                  </li>
+
+              </ul>
+        </li>
+        <li>
+            <p class="subtitle is-inline-flex">clearPrefix()</p>
+            <span class="tag is-dark baseline" style="margin-left: 14px;"> beforehand <span class="icon margin-left"><i class="fa fa-times"></i></span></span>
+            <span class="tag is-dark baseline"> in-code <span class="icon margin-left" ><i class="fa fa-times"></i></span></span>
+            <span class="tag is-dark baseline"> custom <span class="icon margin-left"><i class="fa fa-check"></i></span></span>
+        </li>
+        <li>
+            <p class="subtitle is-inline-flex">disable( Type, Name )</p>
+            <span class="tag is-dark baseline" style="margin-left: 14px;"> beforehand <span class="icon margin-left"><i class="fa fa-times"></i></span></span>
+            <span class="tag is-dark baseline"> in-code <span class="icon margin-left" ><i class="fa fa-times"></i></span></span>
+            <span class="tag is-dark baseline"> custom <span class="icon margin-left"><i class="fa fa-check"></i></span></span>
+            <ul>
+                  <li>
+                    <p class="is-inline-flex"> Type </p>
+                    <div class="tags has-addons is-inline-flex"style="margin-left: 14px">
+                      <span class="tag is-info"> Type </span>
+                      <span class="tag"> String &#x3C;<a target="_blank" href="disableTypeOption/">disableTypeOption</a>&#x3E;</span>
+                    </div>
+                  </li>
+                  <li>
+                      <p class="is-inline-flex"> Name </p>
+                        <span class="tag is-info"> Type </span>
+                        <span class="tag"> String (moduleName)</span>
+                      </div>
+                  </li>
+              </ul>
+        </li>
+        <li>
+            <p class="subtitle is-inline-flex">enable( Type, Name )</p>
+            <span class="tag is-dark baseline" style="margin-left: 14px;"> beforehand <span class="icon margin-left"><i class="fa fa-times"></i></span></span>
+            <span class="tag is-dark baseline"> in-code <span class="icon margin-left" ><i class="fa fa-times"></i></span></span>
+            <span class="tag is-dark baseline"> custom <span class="icon margin-left"><i class="fa fa-check"></i></span></span>
+            <ul>
+                  <li>
+                    <p class="is-inline-flex"> Type </p>
+                    <div class="tags has-addons is-inline-flex"style="margin-left: 14px">
+                      <span class="tag is-info"> Type </span>
+                      <span class="tag"> String &#x3C;<a target="_blank" href="/documentation/types/disableTypeOption/">disableTypeOption</a>&#x3E;</span>
+                    </div>
+                  </li>
+                  <li>
+                      <p class="is-inline-flex"> Name </p>
+                        <span class="tag is-info"> Type </span>
+                        <span class="tag"> String (moduleName)</span>
+                      </div>
+                  </li>
+              </ul>
+        </li>
+    </ul>
+</div>

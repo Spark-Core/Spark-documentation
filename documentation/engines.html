@@ -29,18 +29,18 @@ menu: menus/documentation/documentation.html
         <p> Below is an example of how a default Engine file is structured: </p>
 
         <pre>
-                var Spark = require("sparkbots")
-                const Engine = Spark.engine("name")
+var Spark = require("sparkbots")
+const Engine = Spark.engine("name")
 
-                Engine.setTime(number)
-                Engine.setDelay(number)
+Engine.setTime(number)
+Engine.setDelay(number)
 
-                Engine.code = (client, message) => {
+Engine.code = (client, message) => {
 
-                  // Execute Code Here
+  // Execute Code Here
 
-                }
-                module.exports = Engine;
+}
+module.exports = Engine;
         </pre>
 
 
