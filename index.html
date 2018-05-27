@@ -21,6 +21,7 @@ color: is-dark
                 stats_gh.update(data.github);
                 stats_downloads.update(data.downloads);
                 $("#stats-version").html(data.version)
+                $("#stats-version").attr("style", "font-size: 24px;")
             }, "json")
 
         })
@@ -28,19 +29,19 @@ color: is-dark
     <div class="level-item has-text-centered">
         <div>
             <p class="heading">Stargazers</p>
-            <div id="stats-gh">0</div>
+            <div id="stats-gh"><i class="fas fa-spin fa-spinner"></i></div>
         </div>
     </div>
     <div class="level-item has-text-centered">
         <div>
             <p class="heading">Downloads</p>
-            <div id="stats-downloads">0</div>
+            <div id="stats-downloads"><i class="fas fa-spin fa-spinner"></i></div>
         </div>
     </div>
     <div class="level-item has-text-centered">
         <div>
             <p class="heading">Version</p>
-            <div id="stats-version">0</div>
+            <div id="stats-version"><i class="fas fa-spin fa-spinner"></i></div>
         </div>
     </div>
 </nav>
