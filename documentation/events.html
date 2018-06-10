@@ -1,0 +1,62 @@
+---
+layout: largePage
+column: headers/documentation.html
+color: is-dark
+title: Events
+subtitle: Using internal events from discord.js to execute code.
+menu: menus/documentation/documentation.html
+---
+<article class="message">
+    <div class="message-header" style="border-radius: 3px">
+        <p>This page talks about Discord.js events, for a list of events click <a href="https://discord.js.org/#/docs/main/11.3.2/class/Client"><b>here</b></a></p>
+        <button class="delete" aria-label="delete"></button>
+    </div>
+</article>
+
+<div class="content">
+
+    <h1 class="title"> About events </h1>
+    <p> Events are Discord.js's way to communicate certain actions happening on Discord. This can be a message being edited or somebody being banned.</p>
+    <p> Spark uses a few events in the framework to handle the bot internally, that's why we do not recommend to use the following events:</p>
+    <ul>
+        <li>
+            <h4 class="subtitle">message</h4></li>
+        <li>
+            <h4 class="subtitle">ready</h4></li>
+    </ul>
+<h1 class="title"> Default event file </h1>
+<p> Because events can be very different for every type of event, we will be showing the "messageDelete" event as an example.</p>
+<p> To use this with another event, replace <code>MessageDelete</code> with the event name, and replace <code>deletedMessage</code> with the parameters belonging to that event.</p>
+<pre>
+const spark = require("sparkbots")
+const event = spark.event("name")
+event.setEvent("MessageDelete")
+event.code = (client, deletedMessage) => {
+    console.log(deletedMessage.content)
+}
+module.exports = event;
+</pre>
+
+<h1 class="title"> Methods </h1>
+
+<ul>
+
+  <li>
+      <h4 class="subtitle"> setEvent(<span class="argument"> Event </span>) </h4>
+      <ul>
+          <li>
+            <p class="is-inline-flex"> Event </p>
+            <div class="tags has-addons first">
+              <span class="tag is-info"> Type </span>
+              <span class="tag"> String (<a href="https://discord.js.org/#/docs/main/11.3.2/class/Client">Event</a>) </span>
+            </div>
+            <span class="tag is-danger"> Required</span>
+          </li>
+      </ul>
+  </li>
+  <li>
+        <h4 class="subtitle"> .disable(<span class="argument"></span>) </h4>
+  </li>
+</ul>
+
+</div>
