@@ -119,4 +119,14 @@ user-select: none;
         width: 250px;
         float: right;
     }
+    iframe {
+        position: relative;
+        top: 50px;
+        left: -67px;
+    }
+}
+@media screen and (max-width: 1024px){
+    iframe {
+        display: none
+    }
 }
