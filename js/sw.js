@@ -4,7 +4,6 @@ importScripts('https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js');
 // Initialize the Firebase app in the service worker by passing in the
 // messagingSenderId.
 firebase.initializeApp({
-    apiKey: "AIzaSyAJgTPOsDu3vGgRE1Bo3rgc2meo3D0-bQQ",
     messagingSenderId: "463922476306"
 });
 
