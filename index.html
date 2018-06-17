@@ -7,24 +7,125 @@ color: is-dark
 <nav class="level">
     <link rel="stylesheet" href="/css/odometer-theme-default.css">
     <script src="/js/odometer.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAJgTPOsDu3vGgRE1Bo3rgc2meo3D0-bQQ",
+    messagingSenderId: "463922476306"
+  };
+  firebase.initializeApp(config);
+</script>
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        stats_gh = new Odometer({
-            el: document.getElementById("stats-gh"),
-            value: 0,
+    const messaging = firebase.messaging();
+    var clicked = false
+    var apiInfo
+    var registration
+    navigator.serviceWorker.register('./js/sw.js')
+    .then((reg) => {
+        registration = reg
+    })
+    function startNotify(){
+            if (clicked == true){return}
+            if (!registration){return}
+            clicked = true;
+
+            messaging.useServiceWorker(registration);
+        messaging.usePublicVapidKey("BCxxHT6X2wLNVw1xroAiyzmp_qOXqwlV9KHgSa8Wlh_Xh3NURh4TkjKbmLwhylkDJmK2_M_-nNRtdCHVJ5fVeWg")
+        messaging.requestPermission().then(function() {
+            console.log('Notification permission granted.');
+            messaging.getToken().then(function(currentToken) {
+              if (currentToken) {
+                  console.log(currentToken)
+                  $.post("https://api.discordspark.com/push", {token: currentToken})
+                  .done(() => {
+                      return $("#stats-version").html(apiInfo.version + " <i id=\"bell\" class=\"fas fa-bell\"></i><i class=\"fas fa-check\" style=\"color: #32CD32\"data-fa-transform=\"shrink-3 left-8 down-7\"></i>")
+
+                  })
+                  .fail(e => {
+                      console.log(e)
+                      return $("#stats-version").html(apiInfo.version)
+
+                  })
+              } else {
+                console.log('No Instance ID token available. Request permission to generate one.');
+                return $("#stats-version").html(apiInfo.version)
+
+              }
+            }).catch(function(err) {
+              console.log('An error occurred while retrieving token. ', err);
+              return $("#stats-version").html(apiInfo.version)
+            });
+
+        }).catch(function(err) {
+            console.log('Unable to get permission to notify.', err);
         });
-        stats_downloads = new Odometer({
-            el: document.getElementById("stats-downloads"),
-            value: 0,
-        });
+    }
+        document.addEventListener('DOMContentLoaded', function() {
+            stats_gh = new Odometer({
+                el: document.getElementById("stats-gh"),
+                value: 0,
+            });
+            stats_downloads = new Odometer({
+                el: document.getElementById("stats-downloads"),
+                value: 0,
+            });
             $.get("https://api.discordspark.com/stats", function(data) {
                 stats_gh.update(data.github);
                 stats_downloads.update(data.downloads);
-                $("#stats-version").html(data.version)
+                apiInfo = data
+                $("#stats-version").html(data.version + " <i id=\"bell\" onclick=\"startNotify()\" class=\"fas fa-bell\"></i>").promise()
+                .then(() => {
+                    if (Notification && Notification.permission == "granted"){
+                        $("#stats-version").html(data.version + " <i id=\"bell\" class=\"fas fa-bell\"></i><i class=\"fas fa-check\" style=\"color: #32CD32\"data-fa-transform=\"shrink-3 left-8 down-7\"></i>")
+                        messaging.onMessage(payload => {
+                            console.log(payload)
+                            var notificationTitle = payload.data.title;
+                            var body =  payload.data.body + "\nClick here for more information."
+                            var notificationOptions = {
+                                body,
+                                icon: '/icons/Spark-icon-no-bg.png',
+                                actions: (null || payload.data.actions)
+
+                            };
+
+                            var myNotification = new Notification(notificationTitle, notificationOptions)
+                            myNotification.onclick = (e) => {
+                                console.log(e)
+                                myNotification.close()
+                                if (window.location.toString().includes("beta")){
+                                    window.location = "https://beta.discordspark.com/releases"
+                                }else{
+                                    window.location = "https://discordspark.com/releases"
+                                }
+                            }
+                            setTimeout(() => {myNotification.close()}, 30000)
+                        })
+                    }
+                })
                 $("#stats-version").attr("style", "font-size: 24px;")
             }, "json")
-
         })
+
+        function askPermission() {
+          return new Promise(function(resolve, reject) {
+            const permissionResult = Notification.requestPermission(function(result) {
+              resolve(result);
+            });
+
+            if (permissionResult) {
+              permissionResult.then(resolve, reject);
+            }
+          })
+          .then(function(permissionResult) {
+            if (permissionResult !== 'granted') {
+              throw new Error('We weren\'t granted permission.');
+            }
+          });
+        }
+
     </script>
     <div class="level-item has-text-centered">
         <div>

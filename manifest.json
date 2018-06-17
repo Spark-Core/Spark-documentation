@@ -1,0 +1,18 @@
+
+{
+  "short_name": "Spark",
+  "name": "Spark",
+  "icons": [
+    {
+      "src": "/icons/Spark-icon.no-bg.png",
+      "type": "image/png",
+      "sizes": "1024x1024"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffe13f",
+  "scope": "/",
+  "theme_color": "#ffe13f",
+  "gcm_sender_id": "103953800507"
+
+}
