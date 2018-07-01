@@ -8,13 +8,12 @@ menu: menus/releases/releases.html
 ---
 <div class="content">
     <h1 version="0.1"> Version 0.1
-        <span class="tag is-danger"> Beta </span>
+        <span class="tag is-success"> <i class="fas fa-check" style="margin-right: 6px"></i> latest release </span>
    </h1>
-    <h4 class="subtitle">Do not use beta versions in production software, as they can be unstable. Use <a onclick="scrollVersion('0.0.6')">a stable version</a> instead.</h4>
     <br>
     <h4 class="subtitle">New in this update:</h4>
     <ul>
-        <li>[<a href="https://github.com/Sparkbots/Spark/commit/643de2ece8ad47274893b04702948df490332053">643de2e</a>] Now possible to pass clientOptions through the client.</li>
+        <li>[<a href="https://github.com/Sparkbots/Spark/commit/643de2ece8ad47274893b04702948df490332053">643de2e</a>] It's now possible to pass clientOptions through the client.</li>
         <li>[<a href="https://github.com/Sparkbots/Spark/commit/8517a960870818b1fccd8b86f7a1f71834ad4d41">8517a96</a>] Created a default about command for information about spark and the bot.</li>
         <li>[<a href="https://github.com/Sparkbots/Spark/commit/8235ea31ac64a320958916dcf5ab7320b499d28b">8235ea3</a>] Created disable feature to deactivate desired parts of the framework.</li>
         <li>[<a href="https://github.com/Sparkbots/Spark/commit/085a331216e06b4ed8b257194729a8c04d20f317">085a331</a>] Created event loader.</li>
@@ -33,20 +32,28 @@ menu: menus/releases/releases.html
         <li>[<a href="https://github.com/Sparkbots/Spark/commit/53580a90abbc9a58869bf2161a09aeeec10d5589">53580a</a>] Update notices have improved.</li>
         <li>[<a href="https://github.com/Sparkbots/Spark/commit/15c262db7ba86d69bf61ceacf0a76d2bc2af1cd7">15c262</a>] Help command now supports more then 25 commands.</li>
         <li>[<a href="https://github.com/Sparkbots/Spark/commit/3cd2b8dfb80a54aaa6f6c529f7982acf5a1e6129">3cd2b8</a>] Removed custom config prefix bug.</li>
+        <li>[<a href="https://github.com/Sparkbots/Spark/commit/868828183f8cda99461c40b1293289ec19542c09">542c09</a>] Fixed a bug where observers sometimes wouldn't get triggered.</li>
 
     </ul>
     <h4 class="subtitle">To install:</h4>
     <code>npm install sparkbots@beta</code>
+    <br>
+    <br>
+    <a class="button is-success" href="https://discordspark.com/documentation/intro"><i class="fas fa-bookmark" style="margin-right: 6px"></i> Documentation for this version</a>
+    <a class="button is-purple" href="https://github.com/Sparkbots/Spark/releases/tag/v0.1.0" target="_blank"><i class="fab fa-github" style="margin-right: 6px"></i> Github release notes</a>
     <hr>
 
     <h1 version="0.0.6"> Version 0.0.6
-        <span class="tag is-success"> Latest Release</span>
+
+        <span class="tag is-danger"> <i class="fas fa-clock" style="margin-right: 6px"></i>  Outdated release </span>
    </h1>
+   <h4 class="subtitle"> This is an outdated version. Consider using <a onclick="scrollVersion('0.1')">the latest release</a> in order to take advantage of the latest features.</h4>
+
     <br>
     <h4 class="subtitle">New in this update:</h4>
     <ul>
-        <li>[<a href="https://github.com/Sparkbots/Spark/commit/dfc380a6c17b1b529628ee1dfe76db26b344f7be">dfc380a</a>] Permission system that makes editing permissions way easier.</li>
-        <li>[<a href="https://github.com/Sparkbots/Spark/commit/4540f43a29d427c75f17d347041c18080bab460c">4540f43</a>] You can now specify.</li>
+        <li>[<a href="https://github.com/Sparkbots/Spark/commit/dfc380a6c17b1b529628ee1dfe76db26b344f7be">dfc380a</a>] Permission system that makes editing permissions easier.</li>
+        <li>[<a href="https://github.com/Sparkbots/Spark/commit/4540f43a29d427c75f17d347041c18080bab460c">4540f43</a>] You can now choose if the bot ignores other bots in messagefunctions or commands.</li>
         <li>[<a href="https://github.com/Sparkbots/Spark/commit/068f78298467a2fa5d1f629fc19a2c615e1de07b">068f782</a>] Created disable feature to deactivate desired parts of the framework.</li>
     </ul>
     <h4 class="subtitle">Improved in this update:</h4>
@@ -57,6 +64,10 @@ menu: menus/releases/releases.html
     </ul>
     <h4 class="subtitle">To install:</h4>
     <code>npm install sparkbots@0.0.6</code>
+    <br>
+    <br>
+    <a class="button is-danger" href="https://archive.discordspark.com/0.0.6"><i class="fas fa-bookmark" style="margin-right: 6px"></i> Documentation for this version</a>
+    <a class="button is-purple" href="https://github.com/Sparkbots/Spark/releases/tag/v0.0.6" target="_blank"><i class="fab fa-github" style="margin-right: 6px"></i> Github release notes</a>
 </div>
 <hr>
 <div class="box">
@@ -75,7 +86,7 @@ menu: menus/releases/releases.html
     function scrollVersion(v) {
         console.log($("h1[version='" + v + "']"))
         $('html, body').animate({
-            scrollTop: $("h1[version='" + v + "']").offset().top
+            scrollTop: ($("h1[version='" + v + "']").offset().top - 100)
         }, 2000);
     }
 </script>

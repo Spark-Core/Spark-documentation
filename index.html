@@ -7,25 +7,38 @@ color: is-dark
 <nav class="level">
     <link rel="stylesheet" href="/css/odometer-theme-default.css">
     <script src="/js/odometer.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script>
+    <script>
+      if (!'serviceWorker' in navigator || !Notification){
+          document.querySelectorAll(".fb").forEach(i.remove())
+      }
+    </script>
+    <script class="fb" src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+    <script class="fb" src="https://www.gstatic.com/firebasejs/5.0.4/firebase-messaging.js"></script>
 
 <script>
   // Initialize Firebase
   var config = {
     messagingSenderId: "463922476306"
   };
-  firebase.initializeApp(config);
+  if ('serviceWorker' in navigator && Notification){
+      firebase.initializeApp(config);
+  }
 </script>
     <script>
-    const messaging = firebase.messaging();
+    var messaging;
+    if ('serviceWorker' in navigator && Notification){
+    messaging = firebase.messaging();
+}
     var clicked = false
     var apiInfo
     var registration
+    if ('serviceWorker' in navigator && Notification){
+
     navigator.serviceWorker.register('./js/sw.js')
     .then((reg) => {
         registration = reg
     })
+}
     function startNotify(){
             if (clicked == true){return}
             if (!registration){return}
@@ -75,8 +88,13 @@ color: is-dark
                 stats_gh.update(data.github);
                 stats_downloads.update(data.downloads);
                 apiInfo = data
-                $("#stats-version").html(data.version + " <i id=\"bell\" onclick=\"startNotify()\" class=\"fas fa-bell\"></i>").promise()
-                .then(() => {
+                $("#stats-version").attr("style", "font-size: 24px;")
+
+                var a = $("#stats-version").html(data.version + " <i id=\"bell\" onclick=\"startNotify()\" class=\"fas fa-bell\"></i>").promise()
+                if ('serviceWorker' in navigator == false || !Notification){
+                    return $("#stats-version").html(data.version + " " )
+                }
+                a.then(() => {
                     if (Notification && Notification.permission == "granted"){
                         $("#stats-version").html(data.version + " <i id=\"bell\" class=\"fas fa-bell\"></i><i class=\"fas fa-check\" style=\"color: #32CD32\"data-fa-transform=\"shrink-3 left-8 down-7\"></i>")
                         messaging.onMessage(payload => {
@@ -104,7 +122,6 @@ color: is-dark
                         })
                     }
                 })
-                $("#stats-version").attr("style", "font-size: 24px;")
             }, "json")
         })
 
