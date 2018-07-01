@@ -27,7 +27,11 @@ menu: menus/documentation/documentation.html
     <span class="tag is-success is-inline-flex">New: V0.1</span>
     <pre>guild.customConfig.prefix = ["!", "+"]</pre>
     <p> Or: </p>
-    <pre>client.customConfig.set("guild-id", {prefix: ["!", "+"]})</pre>
+    <pre>
+    var data = client.customConfig.get("id")
+    data.prefix = ["!", "!!!"]
+    client.customConfig.set("id", data)
+  </pre>
 
     <h1 class="title">Properties</h1>
     <h4 class="subtitle">You can also add your own properties, these are just the ones having built-in support</h4>
