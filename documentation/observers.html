@@ -11,7 +11,7 @@ menu: menus/documentation/documentation.html
 
     <h1 class="title"> What is an Observer </h1>
 
-    <p> An Observer is a function that observes the behavior of messages or commands. They are always keeping an eye on the behavior of messages and commands dependant on what you want it to observe. </p> 
+    <p> An Observer is a function that observes the behavior of messages or commands. They are always keeping an eye on the behavior of messages and commands dependant on what you want it to observe. </p>
     <p> Observers can be restricted to observe certain types of text whether it be messages, commands or both. In addition, you can choose to disable an Observer easily. </p>
     <p> Spark already contains some pre-made Observers for you: </p>
     <ul>
@@ -22,14 +22,14 @@ menu: menus/documentation/documentation.html
     </ul>
 <br>
     <p> Below you will find out how to create an Observer, as well as the methods that may be used to help you with creating an Observer. </p>
-          
-        
-            
+
+
+
         <h1 class="title"> Constructor </h1>
-        
+
         <p> To create an Observer, you will need to create a new ".js" file inside the functions/observers folder. </p>
         <p> Below is an example of how a default Observer file is structured: </p>
-        
+
         <pre>
 var Spark = require("sparkbots")
 const Observer = Spark.observer("name")
@@ -41,11 +41,11 @@ Observer.code = (client, message) => {
 }
 module.exports = Observer;
     </pre>
-        
-        
-        
+
+
+
         <h1 class="title"> Methods </h1>
-        
+
         <ul>
           <li>
               <h4 class="subtitle"> setType(<span class="argument"> Type </span>) </h4>
@@ -56,18 +56,22 @@ module.exports = Observer;
                       <span class="tag is-info"> Type </span>
                       <span class="tag"> string </span>
                     </div>
+                    <div class="tags has-addons first">
+                      <span class="tag is-purple"> Default </span>
+                      <span class="tag"> "all" </span>
+                    </div>
                   </li>
-               <p> Please note that you may choose from the following options: "commands" or "messages".</p> 
+               <p> Please note that you may choose from the following options: "command" "message" or "all".</p>
               </ul>
           </li>
- <br>         
+ <br>
           <li>
               <h4 class="subtitle"> .disable(<span class="argument"></span>) </h4>
           </li>
         </ul>
-        
-        
- <!--       
+
+
+ <!--
         <h1 class="title"> Properties </h1>
         <ul>
           <li>
@@ -81,7 +85,6 @@ module.exports = Observer;
               </div>
             </li>
           </ul>
-        -->  
+        -->
 
         </div>
-        

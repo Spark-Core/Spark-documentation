@@ -23,11 +23,15 @@ menu: menus/documentation/documentation.html
     option1: "value1" })
 </pre>
     <p> Another option is to edit it directly into the core (<code>client.config.&lt;property&gt;</code>)</p>
-    <p class="is-inline-flex" style="margin-right: 14px"> You can also change it it for 1 guild only, like this:</p>
+    <p class="is-inline-flex" style="margin-right: 14px"> You can also change it for 1 guild only, like this:</p>
     <span class="tag is-success is-inline-flex">New: V0.1</span>
     <pre>guild.customConfig.prefix = ["!", "+"]</pre>
     <p> Or: </p>
-    <pre>client.customConfig.set("guild-id", {prefix: ["!", "+"]})</pre>
+    <pre>
+    var data = client.customConfig.get("id")
+    data.prefix = ["!", "!!!"]
+    client.customConfig.set("id", data)
+  </pre>
 
     <h1 class="title">Properties</h1>
     <h4 class="subtitle">You can also add your own properties, these are just the ones having built-in support</h4>
