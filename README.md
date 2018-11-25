@@ -20,7 +20,7 @@ This software is only used for internal development. We can't promise support / 
 - Host for public use and tell other users to use your host.
 - Forcing other users to use your version of this software instead of the official host (https://discordspark.com/).
 - Providing documentation.
-- Trying to find loopholes, bugs, errors, etc. in the software without reporting them [here](https://github.com/sparkbots/Spark-documenation/issues).
+- Trying to find loopholes, bugs, errors, etc. in the software without reporting them [here](https://github.com/Spark-Core/Spark-documenation/issues).
 
 ##### :warning: By cloning and / or using this software you agree to include this file and the license file inside your code.
 
