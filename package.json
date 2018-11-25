@@ -4,7 +4,7 @@
   "description": "Server software to manage the Spark documentation site.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sparkbots/Spark-documentation.git"
+    "url": "git+https://github.com/Spark-Core/Spark-documentation.git"
   },
   "keywords": [
     "Spark"
@@ -12,9 +12,9 @@
   "author": "Sparkbots organisation",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Sparkbots/Spark-documentation/issues"
+    "url": "https://github.com/Spark-Core/Spark-documentation/issues"
   },
-  "homepage": "https://github.com/Sparkbots/Spark-documentation#readme",
+  "homepage": "https://github.com/Spark-Core/Spark-documentation#readme",
   "dependencies": {
     "request": "^2.85.0"
   }

@@ -2,7 +2,7 @@
 
 The Spark icons & custom designs  are not included by the MIT license grant.<br>
 The Spark icons include all the files including **Spark** in the name in the `/icons` directory.<br>
-The Sparkbots organisation, or for short: the organisation is [this github organisation](https://github.com/Sparkbots). <br>
+The Sparkbots organisation, or for short: the organisation is [this github organisation](https://github.com/Spark-Core). <br>
 The organisation is owned by [TobiasFeld22](https://github.com/TobiasFeld22/).<br>
 The organisation keeps all copyright rights for the Spark icons.<br>
 
@@ -13,7 +13,7 @@ The organisation keeps all copyright rights for the Spark icons.<br>
 - Use the icon for a button linking to a Spark dashboard.
 
 #### :x: You are not allowed to do:
-- Alter icon's colors, dimensions or add text / images. 
+- Alter icon's colors, dimensions or add text / images.
 - Use the icon for your own project, organisation, app, etc.
 - Add the icon inside your images or icons.
 - Use the icons without written permission from the organisation.
@@ -23,5 +23,5 @@ The organisation keeps all copyright rights for the Spark icons.<br>
     If you want to use artwork that's not included in this directory.
     If you want to use these images in a video.
     If you're unsure if something you want to do is allowed or you want to ask for special exceptions.
-    
+
 You ask that in the [Discord server](https://discord.gg/TezD2Zg) in the support channels. Or dm an staff member in that server.
